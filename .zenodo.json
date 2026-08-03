@@ -1,7 +1,7 @@
 {
   "upload_type": "software",
   "title": "Does Google's Open Knowledge Format improve retrieval-augmented generation? A controlled study on one regulatory document",
-  "version": "v1.0.1",
+  "version": "v1.1.0",
   "language": "eng",
   "access_right": "open",
   "license": "mit",
@@ -30,7 +30,7 @@
   "notes": "Funding: AiDash. Competing interests: none declared for this study; an unrelated in-house retrieval pipeline is withheld from the work and appears in no experiment, table or claim. Hosted language models were used to generate and to score answers; no human participants or personal data were involved. The source document is a public regulatory filing, identified in the release by SHA-256 so readers can obtain and verify the original.",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/Abhinav0905/okf-vs-rag-evaluation/tree/v1.0.1",
+      "identifier": "https://github.com/Abhinav0905/okf-vs-rag-evaluation/tree/v1.1.0",
       "relation": "isSupplementTo",
       "resource_type": "software",
       "scheme": "url"

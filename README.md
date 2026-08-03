@@ -9,7 +9,7 @@ outputs, and the paper.
 improve retrieval or answer quality. The improvement OKF appears to give turns
 out to depend entirely on what you compare it against.
 
-Paper: **[okf_trial_data/paper/PAPER.md](okf_trial_data/paper/PAPER.md)**
+Paper: **[PDF](okf_trial_data/paper/PAPER.pdf)** · **[Markdown](okf_trial_data/paper/PAPER.md)**
 
 ## The three findings
 
@@ -70,8 +70,10 @@ instead of RAG.
 
 ```
 okf_trial_data/
-  paper/PAPER.md                    the paper, generated from the records
-  paper/render_okf_vs_rag_paper.py  regenerates it; no number is hand-typed
+  paper/PAPER.pdf                   typeset paper, 9 pages with figures
+  paper/PAPER.md                    same content as Markdown
+  paper/render_paper.py             regenerates both; no number is hand-typed
+  paper/make_figures.py             regenerates the three figures
   scripts/                          build, run, judge, analyse
   src/okf_trial_data/               OKF producer, consumers, evaluator
   data/benchmark_questions.json     93 questions with page-level answer keys
@@ -101,7 +103,8 @@ python3.11 -m venv .venv
 # billable, about $8 on Amazon Bedrock
 ./scripts/with_experiment_env.sh .venv/bin/python scripts/run_hybrid_ab_experiment.py --stage all
 
-.venv/bin/python paper/render_okf_vs_rag_paper.py
+.venv/bin/python paper/make_figures.py
+.venv/bin/python paper/render_paper.py
 ```
 
 ## Caveats worth reading before citing
