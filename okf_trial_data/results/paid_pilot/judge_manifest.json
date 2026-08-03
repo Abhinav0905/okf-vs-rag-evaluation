@@ -1,0 +1,19 @@
+{
+  "answer_count": 45,
+  "aws_identity": {
+    "account_sha256": "b5d7874de78bc1efc5d3f68dfd560ccd4eac9a46339c3e0cd80c5ebc884ee8a8",
+    "arn_sha256": "741fcce36aa501b699aa0d1836d76b0afd94613f8f3904a9c4baf9db585cfd71"
+  },
+  "expected_trial_records": 135,
+  "generation_manifest_sha256": "785d03e3eda4996f8312f94ded83ab99a74050392bd7ca0041e7c29e80ddc10b",
+  "generation_records_sha256": "8371db26e60c7c77ba927c7b07e6eb90de339f8c093d2846a2269879830de9bd",
+  "judge_backend": "bedrock",
+  "judge_model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "judge_region": "us-west-2",
+  "max_attempts_per_trial": 3,
+  "python": "3.11.14",
+  "schema_version": "okf-judge-manifest-v1",
+  "temperature": 0.0,
+  "trials_per_answer": 3,
+  "workers": 6
+}

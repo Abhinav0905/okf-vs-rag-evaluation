@@ -1,0 +1,18 @@
+{
+  "answer_count": 30,
+  "aws_identity": {
+    "status": "not_required_for_mock"
+  },
+  "expected_trial_records": 90,
+  "generation_manifest_sha256": "5c91d768ee089dccbf906f37f7ef020668b20b615de39078967a254400d7a0cb",
+  "generation_records_sha256": "bc219617f0597f558ee550472da1a5bd735965e88f43010cdea150f6a646927b",
+  "judge_backend": "mock",
+  "judge_model": "mock-strict-judge",
+  "judge_region": "us-west-2",
+  "max_attempts_per_trial": 3,
+  "python": "3.11.14",
+  "schema_version": "okf-judge-manifest-v1",
+  "temperature": 0.0,
+  "trials_per_answer": 3,
+  "workers": 6
+}

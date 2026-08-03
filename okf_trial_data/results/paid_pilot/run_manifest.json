@@ -1,0 +1,42 @@
+{
+  "answerable_count": 2,
+  "aws_identity": {
+    "account_sha256": "b5d7874de78bc1efc5d3f68dfd560ccd4eac9a46339c3e0cd80c5ebc884ee8a8",
+    "arn_sha256": "741fcce36aa501b699aa0d1836d76b0afd94613f8f3904a9c4baf9db585cfd71"
+  },
+  "benchmark_id": "wmp_okf_pge_97_v1",
+  "benchmark_sha256": "1ea5c2142565d4bde6a5b0395887528295bc1434a65780e7678529ccd8ee3971",
+  "bundle_content_sha256": "bec2561aa21eb4be38259d04d9aa34ed96b9abd57058fe7d10ce775eded1eb03",
+  "conditions": [
+    "raw_vector",
+    "okf_hybrid",
+    "okf_native"
+  ],
+  "control_count": 1,
+  "expected_records": 45,
+  "experiment_config_sha256": "aedc2c71433c082d8019af4eb519918e4cd5563afbc47af3678fb986f2867c3b",
+  "experiment_id": "okf_wmp_paired_v1",
+  "generator_backend": "bedrock",
+  "generator_model": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+  "generator_region": "us-west-2",
+  "harness_config_sha256": "0111322ccc74ca64781ce8c0f2569e8dc01ae1b8cfd4ce9a7b3552d6477b48d9",
+  "max_tokens": 1024,
+  "okf_spec_commit": "3fcbb9f828c2f23d109c855ee403c3a4c81f3a96",
+  "ordered_qid_sha256": "a42bd6c609fd2f96c98162f45c3552fe8feac9794605b8b069115afd39d3c45e",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "python": "3.11.14",
+  "question_count": 3,
+  "schedule_sha256": "892b4d976d3c66e50418b712d328dd1ea25ada20bf02cce15835f5fa034e51da",
+  "schema_version": "okf-run-manifest-v1",
+  "seed": 42,
+  "source_pdf_sha256": "e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a",
+  "systems": [
+    "simple_rag",
+    "reranked_simple",
+    "agentic_rag",
+    "self_rag",
+    "flare"
+  ],
+  "temperature": 0.0,
+  "workers": 3
+}

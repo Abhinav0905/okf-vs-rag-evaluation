@@ -1,0 +1,41 @@
+{
+  "answerable_count": 1,
+  "aws_identity": {
+    "status": "not_required_for_mock"
+  },
+  "benchmark_id": "wmp_okf_pge_97_v1",
+  "benchmark_sha256": "1ea5c2142565d4bde6a5b0395887528295bc1434a65780e7678529ccd8ee3971",
+  "bundle_content_sha256": "bec2561aa21eb4be38259d04d9aa34ed96b9abd57058fe7d10ce775eded1eb03",
+  "conditions": [
+    "raw_vector",
+    "okf_hybrid",
+    "okf_native"
+  ],
+  "control_count": 1,
+  "expected_records": 30,
+  "experiment_config_sha256": "ac7dec6857a0a2f7ecca4b17c503f161b6fe02a3301612224f16fa4976666fdc",
+  "experiment_id": "okf_wmp_paired_v1",
+  "generator_backend": "mock",
+  "generator_model": "mock",
+  "generator_region": "us-west-2",
+  "harness_config_sha256": "0111322ccc74ca64781ce8c0f2569e8dc01ae1b8cfd4ce9a7b3552d6477b48d9",
+  "max_tokens": 1024,
+  "okf_spec_commit": "3fcbb9f828c2f23d109c855ee403c3a4c81f3a96",
+  "ordered_qid_sha256": "0dd12f1e673da1420d0e3e6c4acaf9828284b231c71f9ff96556955ef1aa519a",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "python": "3.11.14",
+  "question_count": 2,
+  "schedule_sha256": "a335722b1715e3035dddbcc134b729720ea61cb9987533b40182c2d08e9ab5b5",
+  "schema_version": "okf-run-manifest-v1",
+  "seed": 42,
+  "source_pdf_sha256": "e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a",
+  "systems": [
+    "simple_rag",
+    "reranked_simple",
+    "agentic_rag",
+    "self_rag",
+    "flare"
+  ],
+  "temperature": 0.0,
+  "workers": 3
+}

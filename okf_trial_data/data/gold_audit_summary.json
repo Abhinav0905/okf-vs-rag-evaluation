@@ -1,0 +1,17 @@
+{
+  "answerable_count": 79,
+  "answerable_full_page_coverage": 79,
+  "automated_flag_count": 0,
+  "benchmark_id": "wmp_okf_pge_93_v2",
+  "benchmark_sha256": "edf8b8a7437543c36eef1f4c22f774f11c8bdb4a13574b6ee9154c922a66742d",
+  "control_count": 14,
+  "corpus_version": "pge_wmp_r0_20260719",
+  "flagged_qids": [],
+  "human_validation_status": "pending",
+  "independent_semantic_review_sha256": "7682bbb715b61ddc5948421b826570e031e9c4e75b16a6daeda3eac9fb7a54b2",
+  "independent_semantic_review_status": "two_model_assisted_reviews_and_cross_review_passed",
+  "question_count": 93,
+  "schema_version": "okf-gold-audit-v1",
+  "scope_note": "This deterministic audit verifies page availability and lexical support; it does not substitute for blinded human answer-quality validation.",
+  "source_pdf_sha256": "e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a"
+}

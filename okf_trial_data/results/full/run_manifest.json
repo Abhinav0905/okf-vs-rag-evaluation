@@ -1,0 +1,94 @@
+{
+  "answerable_count": 79,
+  "aws_identity": {
+    "account_sha256": "b5d7874de78bc1efc5d3f68dfd560ccd4eac9a46339c3e0cd80c5ebc884ee8a8",
+    "arn_sha256": "741fcce36aa501b699aa0d1836d76b0afd94613f8f3904a9c4baf9db585cfd71"
+  },
+  "benchmark_id": "wmp_okf_pge_93_v2",
+  "benchmark_sha256": "edf8b8a7437543c36eef1f4c22f774f11c8bdb4a13574b6ee9154c922a66742d",
+  "bundle_content_sha256": "bec2561aa21eb4be38259d04d9aa34ed96b9abd57058fe7d10ce775eded1eb03",
+  "code_provenance": {
+    "file_sha256": {
+      "eval_harness/src/evaluation/config.py": "d164cad186343f6f455a3f39c0a7795a6845b8e3a36f6e246b4fab79c2a8d959",
+      "eval_harness/src/evaluation/generator.py": "0e715b8712abce79e1cd3713b126297343be47703a5d6a68ed36109418ef42e4",
+      "eval_harness/src/evaluation/retriever.py": "e14dada8c0e1d46476421c7bda23741d2beb3e7065344ea92ff1cec18bf78b65",
+      "eval_harness/src/evaluation/systems/agentic_rag.py": "64dd0d4667d43ab8bc8a15284b32d75bcfba7778b02d61d65ea2b72fc02e1462",
+      "eval_harness/src/evaluation/systems/base.py": "a532bc9205e8a6d96a7736750ce5164675db976657e3e8a278136f3d2726a348",
+      "eval_harness/src/evaluation/systems/flare.py": "c379f0f8f15371557337d6a148c65374e31bc44d205702223847f18469ce36ff",
+      "eval_harness/src/evaluation/systems/reranked_simple.py": "c85440cf9b5dc7f507c3ff372da8a2afe4bcb421a8c2563c2ec13ff000a29543",
+      "eval_harness/src/evaluation/systems/self_rag.py": "636485e785b4835503464ac3d9b496bb5d84efdb776765a13c61e352b8c8bdf2",
+      "eval_harness/src/evaluation/systems/simple_rag.py": "91f924aba81ba960e8d13fa62c14c35a68e4bfcd2961cbac84597241636d74f8",
+      "okf_trial_data/scripts/analyze_results.py": "b5fcc3d89944e366226dc9138add6d6c0a5cfa39d3c5dec51d3186a94226d37e",
+      "okf_trial_data/scripts/run_generation.py": "3fb9884f0f8caee1dc2b71521c3f2f4778cafceb89e4f34cdc31b50e0998ddc8",
+      "okf_trial_data/scripts/run_judging.py": "388cfc94822fda9a927eabcf7e5812270a7ecee9aa653b74aa78dec0eee96fff",
+      "okf_trial_data/src/okf_trial_data/evaluator.py": "518915ca6271297b1ebad1827d51c8549fc3d754c38b5a5caf494d8bbc8c8ca0",
+      "okf_trial_data/src/okf_trial_data/harness_adapter.py": "e2283321fd30a229e46d3362802d8579853bddb3c739ed718225c11a87152da9",
+      "okf_trial_data/src/okf_trial_data/okf_bundle.py": "e355896957fafab40fc018950ae180ca8d2cc58248b3054832a450b0f1532179",
+      "okf_trial_data/src/okf_trial_data/okf_retrievers.py": "5ff67909b36437ec174dcfbbc00b44fe78f943879b2c45260d74d3584c009dc3"
+    },
+    "git": {
+      "available": true,
+      "dirty": true,
+      "head": "eab745fefd3854b67009d5a99c306a6c1047da1a",
+      "status_entry_count": 49
+    }
+  },
+  "conditions": [
+    "raw_vector",
+    "okf_hybrid",
+    "okf_native"
+  ],
+  "control_count": 14,
+  "database_snapshot": {
+    "canonical_chunks_jsonl_sha256": {
+      "PC": "b151bc02df11b52919027425c2721d83fb48db48dc69e7f9a75d763ed172417e",
+      "PGE": "360f58d8eb6d4f211aee0e6ba501a3febc75e2152fd5787c7633c45d03e72689",
+      "SCE": "1d2129f42d0f7e48979a12cf751144076ba7cde9278fcdff890b63a74ced742d"
+    },
+    "corpus_counts": {
+      "PC": 491,
+      "PGE": 654,
+      "SCE": 692
+    },
+    "database_content_sha256": "cefb7336b7a866eb8a0901967bfa127ae8ac2ad1ddaccd89ae08bb7159350ddc",
+    "embedding_dimensions": [
+      384
+    ],
+    "embedding_inventory_sha256": "9a2b22afa92ba1c3a43e8af3706775acd415407d0a17cb4306f304803fca816b",
+    "row_count": 1837,
+    "table": "wmp_chunks"
+  },
+  "expected_records": 1395,
+  "experiment_config_sha256": "2cee08f07738ec9ab2681e76f09678a5f0314d71a65b7f8897fbdb4640317ec0",
+  "experiment_id": "okf_wmp_paired_v2",
+  "generator_backend": "bedrock",
+  "generator_model": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+  "generator_region": "us-west-2",
+  "gold_audit_snapshot": {
+    "cross_review_sha256": "7682bbb715b61ddc5948421b826570e031e9c4e75b16a6daeda3eac9fb7a54b2",
+    "human_validation_status": "pending",
+    "independent_semantic_review_status": "two_model_assisted_reviews_and_cross_review_passed",
+    "records_sha256": "c7472ab7d8ed120e30935f1f6cbeeb1635fbe563277c73e5067278a33c07ce84",
+    "summary_sha256": "2a2bed39f1ea935fc255cb7c7dd32473b4851e8c2e56cc9ab9f72f9c6b8f2394"
+  },
+  "harness_config_sha256": "0111322ccc74ca64781ce8c0f2569e8dc01ae1b8cfd4ce9a7b3552d6477b48d9",
+  "max_tokens": 1024,
+  "okf_spec_commit": "3fcbb9f828c2f23d109c855ee403c3a4c81f3a96",
+  "ordered_qid_sha256": "e74e010570ba83656ca121f0d600e7839f6c3b90afaf79e6f801886298c85dd2",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "python": "3.11.14",
+  "question_count": 93,
+  "schedule_sha256": "70ef21116aa2f924a34a9a2f47ec9956aaf514963df16f69761b4e0a5b74db6f",
+  "schema_version": "okf-run-manifest-v1",
+  "seed": 42,
+  "source_pdf_sha256": "e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a",
+  "systems": [
+    "simple_rag",
+    "reranked_simple",
+    "agentic_rag",
+    "self_rag",
+    "flare"
+  ],
+  "temperature": 0.0,
+  "workers": 3
+}

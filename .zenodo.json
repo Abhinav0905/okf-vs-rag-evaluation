@@ -1,0 +1,51 @@
+{
+  "upload_type": "software",
+  "title": "Does Google's Open Knowledge Format improve retrieval-augmented generation? A controlled study on one regulatory document",
+  "version": "v1.0.1",
+  "language": "eng",
+  "access_right": "open",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Abhinav, Kumar",
+      "affiliation": "AiDash",
+      "orcid": "0009-0009-1839-841X"
+    }
+  ],
+  "description": "<p>Code, data, raw model outputs, protocol and paper for a controlled evaluation of whether Google Cloud's Open Knowledge Format (OKF) v0.2 improves retrieval-augmented generation. The testbed is the PG&amp;E 2026-2028 Base Wildfire Mitigation Plan, a 623-page public regulatory filing, with 93 questions carrying page-level answer keys (79 answerable, 14 controls).</p><p><strong>Finding: it does not.</strong></p><p><em>1. The apparent OKF advantage is an artifact.</em> A lexical OKF retriever scored 91.1% page-hit against 65.8% for the vector-database baseline. That baseline's encoder accepts 256 tokens while 80.9% of these passages are longer, so it received a median of only 64% of each passage. Plain BM25 over the same text, using no OKF at all, scored 97.5%. Measured against plain BM25, adding OKF costs page recall: -0.070 (95% CI -0.133 to -0.013).</p><p><em>2. OKF built as intended is worse, not better.</em> A topic-structured bundle of 1,011 concepts, one per topic, nested six levels with parent, child and sibling links, derived from the document's own outline and retaining 99.9% of its words verbatim, scored 75.9% against 88.6% for plain chunk retrieval at a matched 2,200-token context budget. Measured causes: link traversal supplied 104 of 588 context units but zero answer pages the direct matches had not already found, and 12 topics exceed the whole context budget so their text is present but unreachable.</p><p><em>3. The A/B depends entirely on the baseline.</em> Adding OKF to a weak vector-only pipeline improves page recall by +0.226 (95% CI +0.133 to +0.323). Adding it to a strong BM25 plus dense plus reranking pipeline yields nothing, and seven of eight paired answer-quality estimates are negative across two independent OKF variants.</p><p>None of this shows OKF is defective. It shows OKF is not a retrieval improvement, consistent with its own specification, which lists storage, query infrastructure and ranking as out of scope. The study does verify portability, version-control reviewability, stable identifiers, provenance that survives handoff, and a reproducible content digest.</p><p><strong>Contents:</strong> both OKF producers and consumers; both bundles (1,837-concept chunk-preserving and 1,011-concept topic-structured, digest-verified); the 93-question benchmark with reference answers and page-level answer keys; all 279 generated answers and 837 judge trials as raw JSONL with zero failures; a pre-results protocol with a complete deviations log; 52 offline tests; and a paper regenerated from the records so that no reported figure is typed by hand.</p><p><strong>Limitations:</strong> one document, one utility, 93 questions, so nothing generalises by itself. Both producers keep text verbatim by design, so a producer that re-authored passages or added semantic rather than structural links might behave differently. The frozen dense baseline was weak owing to a truncating encoder; it is reported as run rather than replaced, with an untruncated arm added as a diagnostic. The diagnostic arms, topic producer and A/B were specified after retrieval results had been seen and are exploratory, each carrying its own multiplicity family. The parallel-query A/B design is the author's own and is not specified by Google. Blinded human validation of the answer keys remains outstanding.</p>",
+  "keywords": [
+    "retrieval-augmented generation",
+    "information retrieval",
+    "Open Knowledge Format",
+    "OKF",
+    "vector database",
+    "BM25",
+    "hybrid retrieval",
+    "knowledge representation",
+    "document question answering",
+    "reproducibility",
+    "negative result",
+    "benchmark"
+  ],
+  "notes": "Funding: AiDash. Competing interests: none declared for this study; an unrelated in-house retrieval pipeline is withheld from the work and appears in no experiment, table or claim. Hosted language models were used to generate and to score answers; no human participants or personal data were involved. The source document is a public regulatory filing, identified in the release by SHA-256 so readers can obtain and verify the original.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Abhinav0905/okf-vs-rag-evaluation/tree/v1.0.1",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/3fcbb9f828c2f23d109c855ee403c3a4c81f3a96/okf/SPEC.md",
+      "relation": "references",
+      "resource_type": "other",
+      "scheme": "url"
+    },
+    {
+      "identifier": "arXiv:2005.11401",
+      "relation": "references",
+      "resource_type": "publication-article",
+      "scheme": "arxiv"
+    }
+  ]
+}

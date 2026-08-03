@@ -1,0 +1,15 @@
+{
+  "answerable_count": 83,
+  "answerable_full_page_coverage": 83,
+  "automated_flag_count": 0,
+  "benchmark_id": "wmp_okf_pge_97_v1",
+  "benchmark_sha256": "1ea5c2142565d4bde6a5b0395887528295bc1434a65780e7678529ccd8ee3971",
+  "control_count": 14,
+  "corpus_version": "pge_wmp_r0_20260719",
+  "flagged_qids": [],
+  "human_validation_status": "pending",
+  "question_count": 97,
+  "schema_version": "okf-gold-audit-v1",
+  "scope_note": "This deterministic audit verifies page availability and lexical support; it does not substitute for blinded human answer-quality validation.",
+  "source_pdf_sha256": "e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a"
+}

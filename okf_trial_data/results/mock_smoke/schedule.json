@@ -1,0 +1,182 @@
+[
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "self_rag",
+    "qid": "NEG-001",
+    "schedule_index": 0
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "self_rag",
+    "qid": "NEG-001",
+    "schedule_index": 1
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "self_rag",
+    "qid": "NEG-001",
+    "schedule_index": 2
+  },
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "reranked_simple",
+    "qid": "NEG-001",
+    "schedule_index": 3
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "reranked_simple",
+    "qid": "NEG-001",
+    "schedule_index": 4
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "reranked_simple",
+    "qid": "NEG-001",
+    "schedule_index": 5
+  },
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "agentic_rag",
+    "qid": "NEG-001",
+    "schedule_index": 6
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "agentic_rag",
+    "qid": "NEG-001",
+    "schedule_index": 7
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "agentic_rag",
+    "qid": "NEG-001",
+    "schedule_index": 8
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "flare",
+    "qid": "NEG-001",
+    "schedule_index": 9
+  },
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "flare",
+    "qid": "NEG-001",
+    "schedule_index": 10
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "flare",
+    "qid": "NEG-001",
+    "schedule_index": 11
+  },
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "simple_rag",
+    "qid": "NEG-001",
+    "schedule_index": 12
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "simple_rag",
+    "qid": "NEG-001",
+    "schedule_index": 13
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "simple_rag",
+    "qid": "NEG-001",
+    "schedule_index": 14
+  },
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "self_rag",
+    "qid": "SF-001",
+    "schedule_index": 15
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "self_rag",
+    "qid": "SF-001",
+    "schedule_index": 16
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "self_rag",
+    "qid": "SF-001",
+    "schedule_index": 17
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "agentic_rag",
+    "qid": "SF-001",
+    "schedule_index": 18
+  },
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "agentic_rag",
+    "qid": "SF-001",
+    "schedule_index": 19
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "agentic_rag",
+    "qid": "SF-001",
+    "schedule_index": 20
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "flare",
+    "qid": "SF-001",
+    "schedule_index": 21
+  },
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "flare",
+    "qid": "SF-001",
+    "schedule_index": 22
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "flare",
+    "qid": "SF-001",
+    "schedule_index": 23
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "reranked_simple",
+    "qid": "SF-001",
+    "schedule_index": 24
+  },
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "reranked_simple",
+    "qid": "SF-001",
+    "schedule_index": 25
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "reranked_simple",
+    "qid": "SF-001",
+    "schedule_index": 26
+  },
+  {
+    "condition": "okf_hybrid",
+    "pipeline": "simple_rag",
+    "qid": "SF-001",
+    "schedule_index": 27
+  },
+  {
+    "condition": "okf_native",
+    "pipeline": "simple_rag",
+    "qid": "SF-001",
+    "schedule_index": 28
+  },
+  {
+    "condition": "raw_vector",
+    "pipeline": "simple_rag",
+    "qid": "SF-001",
+    "schedule_index": 29
+  }
+]

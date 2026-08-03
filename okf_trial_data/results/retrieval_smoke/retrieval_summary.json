@@ -1,0 +1,44 @@
+{
+  "benchmark_id": "wmp_okf_pge_97_v1",
+  "benchmark_sha256": "e37d53df056c4912debc766dd40e8492f74c4102b2c98c5f53a41c76eaa7cd0e",
+  "bundle_content_sha256": "bec2561aa21eb4be38259d04d9aa34ed96b9abd57058fe7d10ce775eded1eb03",
+  "condition_order": "seeded within-question randomization",
+  "experiment_id": "okf_wmp_paired_v1",
+  "results": {
+    "okf_hybrid": {
+      "mean_expected_page_recall": 0.8,
+      "mean_linked_chunk_fraction": 0.5,
+      "mean_reciprocal_rank": 0.64,
+      "median_latency_ms": 7.821499835699797,
+      "page_hit_rate": 0.8,
+      "questions": 5,
+      "scored_questions": 5
+    },
+    "okf_native": {
+      "mean_expected_page_recall": 1.0,
+      "mean_linked_chunk_fraction": 0.5,
+      "mean_reciprocal_rank": 0.68,
+      "median_latency_ms": 2.6264158077538013,
+      "page_hit_rate": 1.0,
+      "questions": 5,
+      "scored_questions": 5
+    },
+    "raw_vector": {
+      "mean_expected_page_recall": 0.8,
+      "mean_linked_chunk_fraction": 0.0,
+      "mean_reciprocal_rank": 0.64,
+      "median_latency_ms": 6.669875234365463,
+      "page_hit_rate": 0.8,
+      "questions": 5,
+      "scored_questions": 5
+    },
+    "raw_vs_okf_hybrid_page_hit_mcnemar": {
+      "discordant": 0,
+      "n": 5,
+      "okf_only_correct": 0,
+      "p_value": 1.0,
+      "raw_only_correct": 0
+    }
+  },
+  "top_k": 10
+}

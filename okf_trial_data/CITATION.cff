@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite it as below."
+title: "Open Knowledge Format v0.2 as a Retrieval Substrate: A Controlled Evaluation Across Five RAG Pipelines"
+abstract: >-
+  A controlled, paired evaluation of one pinned Open Knowledge Format (OKF) v0.2
+  producer and two disclosed consumers inside five unchanged retrieval-augmented
+  generation pipelines, on a single regulatory document with a 93-question
+  benchmark. The confirmatory comparison against ordinary vector retrieval is a
+  null. A diagnostic decomposition shows that the large advantage initially
+  observed for the lexical OKF consumer is attributable to lexical matching and
+  to a dense baseline whose encoder truncated most of each passage, not to the
+  format; plain BM25 with no OKF component scores higher still. The artifact
+  contains the producer, consumers, bundle, questions, answer keys, all raw model
+  outputs, and the analysis and manuscript generation code.
+type: software
+version: "0.1.0"
+license: MIT
+# ---------------------------------------------------------------------------
+# Author input required before minting a DOI. Replace every bracketed value.
+# ---------------------------------------------------------------------------
+authors:
+  - family-names: "Abhinav"
+    given-names: "Kumar"
+    affiliation: "AiDash"
+    orcid: "https://orcid.org/0009-0009-1839-841X"
+doi: "10.5281/zenodo.21778673"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21778673"
+    description: "Concept DOI, all versions"
+  - type: doi
+    value: "10.5281/zenodo.21778674"
+    description: "Version DOI, v1.0.0"
+repository-code: "https://github.com/Abhinav0905/okf-vs-rag-evaluation"
+url: "https://github.com/Abhinav0905/okf-vs-rag-evaluation"
+date-released: "2026-08-02"
+keywords:
+  - retrieval-augmented generation
+  - information retrieval
+  - Open Knowledge Format
+  - knowledge representation
+  - lexical retrieval
+  - BM25
+  - reproducibility
+  - negative results
+  - document question answering
+references:
+  - type: standard
+    title: "Open Knowledge Format (OKF), Version 0.2"
+    authors:
+      - name: "Google Cloud"
+    notes: >-
+      Operative specification, pinned at commit
+      3fcbb9f828c2f23d109c855ee403c3a4c81f3a96.
+    url: "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/3fcbb9f828c2f23d109c855ee403c3a4c81f3a96/okf/SPEC.md"
+  - type: article
+    title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+    authors:
+      - family-names: "Lewis"
+        given-names: "Patrick"
+    year: 2020
+    url: "https://arxiv.org/abs/2005.11401"

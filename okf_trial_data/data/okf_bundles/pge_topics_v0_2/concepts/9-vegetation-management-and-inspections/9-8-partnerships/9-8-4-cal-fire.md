@@ -1,0 +1,59 @@
+---
+type: Document Section
+title: 9.8.4 CAL FIRE
+resource: urn:sha256:e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a#section=9-8-4-cal-fire
+tags:
+- document-section
+- corpus-pge
+- level-3
+status: stable
+generated:
+  by: process:okf-trial-topic-bundle-v1
+  at: '2026-08-02T00:00:00Z'
+sources:
+- id: source-pdf
+  resource: urn:sha256:e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a#pages=426
+  title: pge-2026-2028-base-wmp-vol1-r0.pdf
+corpus: PGE
+corpus_version: pge_wmp_r0_20260719
+source_chunk_id: PGE-TOPIC-00688
+slug: 9-8-4-cal-fire
+outline_level: 3
+outline_order: 688
+section_number: 9.8.4
+section_path:
+- 9. Vegetation Management and Inspections
+- 9.8 Partnerships
+- 9.8.4 CAL FIRE
+page_number: 426
+page_numbers:
+- 426
+document_name: pge-2026-2028-base-wmp-vol1-r0.pdf
+source_sha256: e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a
+content_sha256: 9685d00d35f2edf8e55108337dec18da4146552a97fa7bd4e12de15497e40490
+child_count: 3
+---
+
+# 9.8.4 CAL FIRE
+
+## Evidence
+
+<!-- okf-trial:evidence-start -->
+9.8.4.1 
+CAL FIRE Overview
+<!-- okf-trial:evidence-end -->
+
+## Relationships
+
+* Parent topic: [9.8 Partnerships](../9-8-partnerships.md)
+* Previous topic: [9.8.3 Western Chapter International Society of Arboriculture (WCISA) and International Society of Arboriculture (ISA)](9-8-3-western-chapter-international-society-of-arboriculture-wcisa-and-interna.md)
+* Next topic: [9.8.5 Fire Safe Councils](9-8-5-fire-safe-councils.md)
+* Child topic: [9.8.4.1 CAL FIRE Overview](9-8-4-cal-fire/9-8-4-1-cal-fire-overview.md)
+* Child topic: [9.8.4.2 CAL FIRE Partnership History](9-8-4-cal-fire/9-8-4-2-cal-fire-partnership-history.md)
+* Child topic: [9.8.4.3 CAL FIRE Future Projects](9-8-4-cal-fire/9-8-4-3-cal-fire-future-projects.md)
+
+## Provenance
+
+Extracted from **pge-2026-2028-base-wmp-vol1-r0.pdf**, page 426.[^source-pdf]
+
+[^source-pdf]: pge-2026-2028-base-wmp-vol1-r0.pdf, page 426.

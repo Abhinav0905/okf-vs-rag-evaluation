@@ -1,0 +1,347 @@
+{
+  "arms": {
+    "chunks_bm25": {
+      "mean_duplicate_token_fraction": 0.013966059704253167,
+      "mean_expected_page_recall": 0.8143459915611815,
+      "mean_pages_in_context": 7.417721518987341,
+      "mean_reciprocal_rank": 0.7216395418927064,
+      "mean_tokens_in_context": 2133.8607594936707,
+      "mean_units_in_context": 5.341772151898734,
+      "median_latency_ms": 2.2526253014802933,
+      "page_hit_rate": 0.8860759493670886
+    },
+    "chunks_dense": {
+      "mean_duplicate_token_fraction": 0.038814140053373206,
+      "mean_expected_page_recall": 0.5485232067510548,
+      "mean_pages_in_context": 9.278481012658228,
+      "mean_reciprocal_rank": 0.5082278481012659,
+      "mean_tokens_in_context": 2157.772151898734,
+      "mean_units_in_context": 6.7594936708860756,
+      "median_latency_ms": 8.644375018775463,
+      "page_hit_rate": 0.5949367088607594
+    },
+    "okf_chain_bm25": {
+      "mean_duplicate_token_fraction": 0.01950095658191215,
+      "mean_expected_page_recall": 0.8270042194092827,
+      "mean_pages_in_context": 7.518987341772152,
+      "mean_reciprocal_rank": 0.7374623267028331,
+      "mean_tokens_in_context": 2161.6455696202534,
+      "mean_units_in_context": 5.7974683544303796,
+      "median_latency_ms": 3.206124994903803,
+      "page_hit_rate": 0.8987341772151899
+    },
+    "okf_plus_rag_chain": {
+      "mean_duplicate_token_fraction": 0.12892857727400006,
+      "mean_expected_page_recall": 0.7742616033755274,
+      "mean_pages_in_context": 8.329113924050633,
+      "mean_reciprocal_rank": 0.6217299578059071,
+      "mean_tokens_in_context": 2175.7974683544303,
+      "mean_units_in_context": 6.974683544303797,
+      "median_latency_ms": 11.150915641337633,
+      "page_hit_rate": 0.8227848101265823
+    },
+    "okf_plus_rag_topic": {
+      "mean_duplicate_token_fraction": 0.07636506878483895,
+      "mean_expected_page_recall": 0.7521097046413502,
+      "mean_pages_in_context": 9.417721518987342,
+      "mean_reciprocal_rank": 0.6122362869198312,
+      "mean_tokens_in_context": 2183.1518987341774,
+      "mean_units_in_context": 6.7594936708860756,
+      "median_latency_ms": 12.177249882370234,
+      "page_hit_rate": 0.7974683544303798
+    },
+    "okf_topic_bm25": {
+      "mean_duplicate_token_fraction": 0.0364003025506493,
+      "mean_expected_page_recall": 0.709915611814346,
+      "mean_pages_in_context": 11.139240506329115,
+      "mean_reciprocal_rank": 0.6635021097046413,
+      "mean_tokens_in_context": 2177.721518987342,
+      "mean_units_in_context": 6.734177215189874,
+      "median_latency_ms": 3.5711671225726604,
+      "page_hit_rate": 0.759493670886076
+    },
+    "okf_topic_hierarchy": {
+      "mean_duplicate_token_fraction": 0.04222996840248446,
+      "mean_expected_page_recall": 0.709915611814346,
+      "mean_pages_in_context": 11.405063291139241,
+      "mean_reciprocal_rank": 0.6635021097046413,
+      "mean_tokens_in_context": 2182.5443037974683,
+      "mean_units_in_context": 7.443037974683544,
+      "median_latency_ms": 2.770000137388706,
+      "page_hit_rate": 0.759493670886076
+    }
+  },
+  "benchmark_id": "wmp_okf_pge_93_v2",
+  "benchmark_sha256": "edf8b8a7437543c36eef1f4c22f774f11c8bdb4a13574b6ee9154c922a66742d",
+  "candidate_depth": 40,
+  "contrasts": {
+    "A/B: plain RAG -> OKF+RAG (chain)": {
+      "arm_a": "chunks_dense",
+      "arm_b": "okf_plus_rag_chain",
+      "page_hit_mcnemar": {
+        "discordant": 20,
+        "n": 79,
+        "okf_only_correct": 19,
+        "p_value": 4.00543212890625e-05,
+        "raw_only_correct": 1
+      },
+      "page_hit_p_holm": 0.0003204345703125,
+      "recall_delta": {
+        "ci_high": 0.3227848101265823,
+        "ci_low": 0.13285864978902998,
+        "confidence": 0.95,
+        "mean_difference": 0.22573839662447256,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      }
+    },
+    "A/B: plain RAG -> OKF+RAG (topic)": {
+      "arm_a": "chunks_dense",
+      "arm_b": "okf_plus_rag_topic",
+      "page_hit_mcnemar": {
+        "discordant": 20,
+        "n": 79,
+        "okf_only_correct": 18,
+        "p_value": 0.0004024505615234375,
+        "raw_only_correct": 2
+      },
+      "page_hit_p_holm": 0.0028171539306640625,
+      "recall_delta": {
+        "ci_high": 0.2974683544303797,
+        "ci_low": 0.11286919831223628,
+        "confidence": 0.95,
+        "mean_difference": 0.2035864978902954,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      }
+    },
+    "OKF chain vs BM25 chunks": {
+      "arm_a": "chunks_bm25",
+      "arm_b": "okf_chain_bm25",
+      "page_hit_mcnemar": {
+        "discordant": 3,
+        "n": 79,
+        "okf_only_correct": 2,
+        "p_value": 1.0,
+        "raw_only_correct": 1
+      },
+      "page_hit_p_holm": 1.0,
+      "recall_delta": {
+        "ci_high": 0.06329113924050633,
+        "ci_low": -0.02531645569620253,
+        "confidence": 0.95,
+        "mean_difference": 0.012658227848101266,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      }
+    },
+    "OKF+RAG (topic) vs BM25 chunks": {
+      "arm_a": "chunks_bm25",
+      "arm_b": "okf_plus_rag_topic",
+      "page_hit_mcnemar": {
+        "discordant": 13,
+        "n": 79,
+        "okf_only_correct": 3,
+        "p_value": 0.09228515625,
+        "raw_only_correct": 10
+      },
+      "page_hit_p_holm": 0.27685546875,
+      "recall_delta": {
+        "ci_high": 0.028481012658227847,
+        "ci_low": -0.15400843881856538,
+        "confidence": 0.95,
+        "mean_difference": -0.06223628691983123,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      }
+    },
+    "baseline: dense chunks -> BM25 chunks": {
+      "arm_a": "chunks_dense",
+      "arm_b": "chunks_bm25",
+      "page_hit_mcnemar": {
+        "discordant": 29,
+        "n": 79,
+        "okf_only_correct": 26,
+        "p_value": 1.5236437320709229e-05,
+        "raw_only_correct": 3
+      },
+      "page_hit_p_holm": 0.00013712793588638306,
+      "recall_delta": {
+        "ci_high": 0.3713080168776371,
+        "ci_low": 0.15611814345991562,
+        "confidence": 0.95,
+        "mean_difference": 0.26582278481012656,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      }
+    },
+    "following hierarchy links": {
+      "arm_a": "okf_topic_bm25",
+      "arm_b": "okf_topic_hierarchy",
+      "page_hit_mcnemar": {
+        "discordant": 0,
+        "n": 79,
+        "okf_only_correct": 0,
+        "p_value": 1.0,
+        "raw_only_correct": 0
+      },
+      "page_hit_p_holm": 1.0,
+      "recall_delta": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "confidence": 0.95,
+        "mean_difference": 0.0,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      }
+    },
+    "topic hierarchy vs BM25 chunks": {
+      "arm_a": "chunks_bm25",
+      "arm_b": "okf_topic_hierarchy",
+      "page_hit_mcnemar": {
+        "discordant": 18,
+        "n": 79,
+        "okf_only_correct": 4,
+        "p_value": 0.0308837890625,
+        "raw_only_correct": 14
+      },
+      "page_hit_p_holm": 0.1544189453125,
+      "recall_delta": {
+        "ci_high": 2.637130801649927e-05,
+        "ci_low": -0.21097046413502107,
+        "confidence": 0.95,
+        "mean_difference": -0.10443037974683547,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      }
+    },
+    "topic structure vs BM25 chunks": {
+      "arm_a": "chunks_bm25",
+      "arm_b": "okf_topic_bm25",
+      "page_hit_mcnemar": {
+        "discordant": 18,
+        "n": 79,
+        "okf_only_correct": 4,
+        "p_value": 0.0308837890625,
+        "raw_only_correct": 14
+      },
+      "page_hit_p_holm": 0.1544189453125,
+      "recall_delta": {
+        "ci_high": 2.637130801649927e-05,
+        "ci_low": -0.21097046413502107,
+        "confidence": 0.95,
+        "mean_difference": -0.10443037974683547,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      }
+    },
+    "topic structure vs OKF chain": {
+      "arm_a": "okf_chain_bm25",
+      "arm_b": "okf_topic_bm25",
+      "page_hit_mcnemar": {
+        "discordant": 17,
+        "n": 79,
+        "okf_only_correct": 3,
+        "p_value": 0.012725830078125,
+        "raw_only_correct": 14
+      },
+      "page_hit_p_holm": 0.07635498046875,
+      "recall_delta": {
+        "ci_high": -0.014767932489451479,
+        "ci_low": -0.21835443037974683,
+        "confidence": 0.95,
+        "mean_difference": -0.11708860759493674,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      }
+    }
+  },
+  "experiment_id": "okf_topic_structure_v1",
+  "hierarchy_link_mechanism": {
+    "from_traversal": 104,
+    "packed_units": 588,
+    "pages_only_from_traversal": 0
+  },
+  "multiplicity": {
+    "family": "topic_structure_contrasts",
+    "method": "holm",
+    "n_tests": 9
+  },
+  "oversized_topic_concepts": {
+    "count": 12,
+    "largest": [
+      {
+        "concept_id": "concepts/01-front-matter/table-of-contents",
+        "tokens": 27768
+      },
+      {
+        "concept_id": "concepts/01-front-matter/list-of-tables",
+        "tokens": 8396
+      },
+      {
+        "concept_id": "concepts/01-front-matter/list-of-figures",
+        "tokens": 6161
+      },
+      {
+        "concept_id": "concepts/4-overview-of-the-service-territory/4-2-catastrophic-wildfire-history",
+        "tokens": 4491
+      },
+      {
+        "concept_id": "concepts/11-emergency-preparedness-collaboration-and-community-outreach/11-4-public-communication-outreach-and-education-awareness/11-4-3-outreach-and-education-awareness-activities",
+        "tokens": 3945
+      },
+      {
+        "concept_id": "concepts/9-vegetation-management-and-inspections/9-8-partnerships",
+        "tokens": 3438
+      },
+      {
+        "concept_id": "concepts/13-lessons-learned/13-3-discontinued-activities",
+        "tokens": 3324
+      },
+      {
+        "concept_id": "concepts/5-risk-methodology-and-assessment/5-2-risk-analysis-framework/5-2-3-key-assumptions-and-limitations",
+        "tokens": 2777
+      },
+      {
+        "concept_id": "concepts/8-grid-design-operations-and-maintenance/8-1-targets/8-1-2-quantitative-targets",
+        "tokens": 2654
+      },
+      {
+        "concept_id": "concepts/10-situational-awareness-and-forecasting/10-6-fire-potential-index/10-6-1-existing-calculation-approach-and-use/calculating-the-fpi-and-model-assumptions",
+        "tokens": 2536
+      }
+    ],
+    "note": "topic concepts larger than the whole context budget can never be retrieved, so their text is present in the bundle but unreachable",
+    "token_budget": 2200
+  },
+  "packing_rule": "whole units in rank order; never truncated",
+  "scored_questions": 79,
+  "status": "exploratory_added_after_confirmatory_run",
+  "token_budget": 2200,
+  "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+  "topic_bundle": {
+    "bundle_content_sha256": "2015e17e077b74df7ded6f8d51010c109c2c34d224e3b117cd47cc22da654241",
+    "concept_count": 1011,
+    "max_depth": 6,
+    "text_policy": "verbatim; no summarisation, rewriting, or invented text",
+    "topic_source": "embedded PDF outline (author's own heading hierarchy)"
+  }
+}

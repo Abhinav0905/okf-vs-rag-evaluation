@@ -1,0 +1,102 @@
+---
+type: Document Section
+title: MBL Support Services
+resource: urn:sha256:e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a#section=mbl-support-services
+tags:
+- document-section
+- corpus-pge
+- level-3
+status: stable
+generated:
+  by: process:okf-trial-topic-bundle-v1
+  at: '2026-08-02T00:00:00Z'
+sources:
+- id: source-pdf
+  resource: urn:sha256:e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a#pages=562,563
+  title: pge-2026-2028-base-wmp-vol1-r0.pdf
+corpus: PGE
+corpus_version: pge_wmp_r0_20260719
+source_chunk_id: PGE-TOPIC-00913
+slug: mbl-support-services
+outline_level: 3
+outline_order: 913
+section_number: null
+section_path:
+- 11. Emergency Preparedness, Collaboration, and Community Outreach
+- 11.5 Customer Support in Wildfire and PSPS Emergencies
+- MBL Support Services
+page_number: 562
+page_numbers:
+- 562
+- 563
+document_name: pge-2026-2028-base-wmp-vol1-r0.pdf
+source_sha256: e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a
+content_sha256: 1effe4fa1ecf06ff2d2e4ac99becdf7591a1a47efe731fe4c14ec6fb35a99cbe
+child_count: 0
+---
+
+# MBL Support Services
+
+## Evidence
+
+<!-- okf-trial:evidence-start -->
+• 
+MBL Marketing, Education, and Outreach:  the MBL Program is an assistance 
+program for residential customers who require extra energy needs due to qualifying 
+medical equipment and conditions.  PG&E encourages customers to participate in 
+the MBL Program throughout the year through targeted acquisition e-mails and 
+letters, digital media advertisement, as well as radio ads.  Pursuant to D.20-06-003, 
+PG&E, along with other IOUs with MBL programs, provides annual MBL training to 
+In-Home Support Services providers before the end of the first quarter each year.
+
+PG&E will continue using all available communication channels prior to and during 
+PSPS, including phone calls, texts, and e-mail notifications to notify potentially 
+impacted MBL customers.  Potentially impacted MBL customers may receive 
+doorbell rings if they do not acknowledge notifications before PSPS.  To ensure that 
+PG&E has accurate customer contact information, PG&E will send out Contact 
+Information Update reminder postcards and e-mail to MBL customers in the HFRA 
+who may be impacted by PSPS, prior to wildfire season in 2025.  PG&E will 
+continue to identify and reach out to MBL customers in the HFRA who have missing 
+or invalid information through a variety of channels to update or obtain contact 
+information.
+
+• 
+D-MEDICAL 12 percent Discount for Non-Tiered Electric Rates:  Historically, the 
+financial benefits received by PG&E’s MBL customers have only been available to 
+customers taking service on a tiered rate schedule like PG&E’s default Time-of-Use 
+(TOU) rate, Schedule E-TOU-C, or its simple tiered (non-TOU) rate, Schedule E-1.  
+This is because the financial benefits were provided to MBL customers solely via 
+augmented baseline allowances that are applicable only to tiered rates.
+
+PG&E implemented D-MEDICAL to coincide with the launch of its new electrification 
+rate, Electric Home (Schedule E-ELEC), both for Net Energy Metering (NEM) and 
+non-NEM customers, and for E-TOU-D customers by the end of 2023.  On 
+December 1, 2024, PG&E will be implementing the final phase of DMEDICAL 
+discount and implementing the discount for its customers taking service on EV-2 
+rate.
+
+• 
+Joint IOU MBL Eligible Population Study:  On September 24, 2021, the CPUC 
+issued Resolution E-5169 to implement improvements to the MBL programs of the 
+Large Utilities.  The Large Utilities have retained a vendor to conduct an MBL Study, 
+which will support and propose new enrollment goals for the next five years for the 
+MBL Program and medical discounts on non-tiered rates, as well as and how often 
+to update the MBL Study, the process for developing these updates, and the 
+process for setting future enrollment goals.
+
+-532-
+
+Access to Electrical Corporation Representatives
+<!-- okf-trial:evidence-end -->
+
+## Relationships
+
+* Parent topic: [11.5 Customer Support in Wildfire and PSPS Emergencies](../11-5-customer-support-in-wildfire-and-psps-emergencies.md)
+* Previous topic: [List and Description of Community Assistance and Services](list-and-description-of-community-assistance-and-services.md)
+* Next topic: [Access to Electrical Corporation Representatives](access-to-electrical-corporation-representatives.md)
+
+## Provenance
+
+Extracted from **pge-2026-2028-base-wmp-vol1-r0.pdf**, pages 562-563.[^source-pdf]
+
+[^source-pdf]: pge-2026-2028-base-wmp-vol1-r0.pdf, pages 562-563.

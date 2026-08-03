@@ -1,0 +1,261 @@
+{
+  "arms": {
+    "hybrid_plus_okf_chain": {
+      "control_refusal_accuracy": 1,
+      "mean_citation_quality": 4.583333333333333,
+      "mean_completeness": 4.481012658227848,
+      "mean_context_units": 4.473118279569892,
+      "mean_context_units_from_okf": 1.6666666666666667,
+      "mean_correctness": 4.506329113924051,
+      "mean_cost_usd": 0.010381903225806451,
+      "mean_generator_calls": 1,
+      "mean_groundedness": 4.692982456140351,
+      "median_latency_ms": 4127.401917241514,
+      "n_cells": 93,
+      "n_control_cells": 14,
+      "page_hit_rate_at_context": 0.8227848101265823
+    },
+    "hybrid_plus_okf_topic": {
+      "control_refusal_accuracy": 1,
+      "mean_citation_quality": 4.428571428571429,
+      "mean_completeness": 4.6118143459915615,
+      "mean_context_units": 4.161290322580645,
+      "mean_context_units_from_okf": 1.6021505376344085,
+      "mean_correctness": 4.531645569620253,
+      "mean_cost_usd": 0.010934935483870967,
+      "mean_generator_calls": 1,
+      "mean_groundedness": 4.653679653679654,
+      "median_latency_ms": 4570.261374581605,
+      "n_cells": 93,
+      "n_control_cells": 14,
+      "page_hit_rate_at_context": 0.8481012658227848
+    },
+    "hybrid_rag": {
+      "control_refusal_accuracy": 1,
+      "mean_citation_quality": 4.6798245614035086,
+      "mean_completeness": 4.6075949367088604,
+      "mean_context_units": 4.354838709677419,
+      "mean_context_units_from_okf": 0,
+      "mean_correctness": 4.620253164556962,
+      "mean_cost_usd": 0.010649548387096775,
+      "mean_generator_calls": 1,
+      "mean_groundedness": 4.776315789473684,
+      "median_latency_ms": 4295.261207967997,
+      "n_cells": 93,
+      "n_control_cells": 14,
+      "page_hit_rate_at_context": 0.8607594936708861
+    }
+  },
+  "benchmark_id": "wmp_okf_pge_93_v2",
+  "benchmark_sha256": "edf8b8a7437543c36eef1f4c22f774f11c8bdb4a13574b6ee9154c922a66742d",
+  "contrasts": {
+    "hybrid RAG -> hybrid + OKF chain": {
+      "arm_a": "hybrid_rag",
+      "arm_b": "hybrid_plus_okf_chain",
+      "cells_better": 2,
+      "cells_tied": 67,
+      "cells_worse": 10,
+      "correctness_delta": {
+        "ci_high": 0.02953586497890297,
+        "ci_low": -0.270042194092827,
+        "confidence": 0.95,
+        "mean_difference": -0.11392405063291135,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      },
+      "dimension_deltas": {
+        "citation_quality": {
+          "ci_high": 0.03070175438596493,
+          "ci_low": -0.24122807017543868,
+          "confidence": 0.95,
+          "mean_difference": -0.09649122807017542,
+          "n_pairs": 76,
+          "n_question_clusters": 76,
+          "repetitions": 10000,
+          "seed": 42
+        },
+        "completeness": {
+          "ci_high": -0.016877637130801693,
+          "ci_low": -0.2616033755274262,
+          "confidence": 0.95,
+          "mean_difference": -0.12658227848101267,
+          "n_pairs": 79,
+          "n_question_clusters": 79,
+          "repetitions": 10000,
+          "seed": 42
+        },
+        "correctness": {
+          "ci_high": 0.02953586497890297,
+          "ci_low": -0.270042194092827,
+          "confidence": 0.95,
+          "mean_difference": -0.11392405063291135,
+          "n_pairs": 79,
+          "n_question_clusters": 79,
+          "repetitions": 10000,
+          "seed": 42
+        },
+        "groundedness": {
+          "ci_high": 0.04824561403508774,
+          "ci_low": -0.23245614035087717,
+          "confidence": 0.95,
+          "mean_difference": -0.0833333333333333,
+          "n_pairs": 76,
+          "n_question_clusters": 76,
+          "repetitions": 10000,
+          "seed": 42
+        }
+      },
+      "n_pairs": 79,
+      "page_hit_mcnemar": {
+        "discordant": 3,
+        "n": 79,
+        "okf_only_correct": 0,
+        "p_value": 0.25,
+        "raw_only_correct": 3
+      },
+      "page_hit_p_holm": 0.5
+    },
+    "hybrid RAG -> hybrid + OKF topics": {
+      "arm_a": "hybrid_rag",
+      "arm_b": "hybrid_plus_okf_topic",
+      "cells_better": 3,
+      "cells_tied": 69,
+      "cells_worse": 7,
+      "correctness_delta": {
+        "ci_high": 0.11814345991561183,
+        "ci_low": -0.2911392405063291,
+        "confidence": 0.95,
+        "mean_difference": -0.08860759493670883,
+        "n_pairs": 79,
+        "n_question_clusters": 79,
+        "repetitions": 10000,
+        "seed": 42
+      },
+      "dimension_deltas": {
+        "citation_quality": {
+          "ci_high": -0.0482456140350877,
+          "ci_low": -0.4254385964912281,
+          "confidence": 0.95,
+          "mean_difference": -0.22807017543859642,
+          "n_pairs": 76,
+          "n_question_clusters": 76,
+          "repetitions": 10000,
+          "seed": 42
+        },
+        "completeness": {
+          "ci_high": 0.1518987341772152,
+          "ci_low": -0.1181434599156118,
+          "confidence": 0.95,
+          "mean_difference": 0.004219409282700407,
+          "n_pairs": 79,
+          "n_question_clusters": 79,
+          "repetitions": 10000,
+          "seed": 42
+        },
+        "correctness": {
+          "ci_high": 0.11814345991561183,
+          "ci_low": -0.2911392405063291,
+          "confidence": 0.95,
+          "mean_difference": -0.08860759493670883,
+          "n_pairs": 79,
+          "n_question_clusters": 79,
+          "repetitions": 10000,
+          "seed": 42
+        },
+        "groundedness": {
+          "ci_high": 0.061513157894735264,
+          "ci_low": -0.33771929824561403,
+          "confidence": 0.95,
+          "mean_difference": -0.12719298245614033,
+          "n_pairs": 76,
+          "n_question_clusters": 76,
+          "repetitions": 10000,
+          "seed": 42
+        }
+      },
+      "n_pairs": 79,
+      "page_hit_mcnemar": {
+        "discordant": 3,
+        "n": 79,
+        "okf_only_correct": 1,
+        "p_value": 1.0,
+        "raw_only_correct": 2
+      },
+      "page_hit_p_holm": 1.0
+    }
+  },
+  "corpus": "PGE",
+  "design": "arm B is arm A plus an OKF source; all else fixed",
+  "experiment_id": "okf_hybrid_ab_v1",
+  "judge_model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "judge_trials_per_cell": 3,
+  "multiplicity": {
+    "family": "hybrid_ab_contrasts",
+    "method": "holm",
+    "n_tests": 2
+  },
+  "pipeline": "reranked_simple",
+  "rubric_saturation": {
+    "citation_quality": {
+      "discriminating": true,
+      "distinct_values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "fraction_at_ceiling": 0.7743813682678311,
+      "mean": 4.563318777292577,
+      "trials_scored": 687
+    },
+    "completeness": {
+      "discriminating": true,
+      "distinct_values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "fraction_at_ceiling": 0.7946554149085795,
+      "mean": 4.566807313642757,
+      "trials_scored": 711
+    },
+    "correctness": {
+      "discriminating": true,
+      "distinct_values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "fraction_at_ceiling": 0.8059071729957806,
+      "mean": 4.552742616033755,
+      "trials_scored": 711
+    },
+    "groundedness": {
+      "discriminating": true,
+      "distinct_values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "fraction_at_ceiling": 0.8442503639010189,
+      "mean": 4.707423580786026,
+      "trials_scored": 687
+    }
+  },
+  "status": "exploratory_added_after_confirmatory_run",
+  "totals": {
+    "generation_cells": 279,
+    "generation_usd": 2.972873999999999,
+    "judge_trials": 837,
+    "judge_usd": 4.947656000000004
+  }
+}

@@ -1,0 +1,1784 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "wmp_okf_pge_97_v1",
+  "title": "PG&E WMP OKF Paired Evaluation Benchmark",
+  "description": "A deterministic union of two existing PG&E WMP evaluation sets. Three duplicate or contradictory controls are excluded; three false-negative labels and six control descriptions are corrected before paid treatment evaluation.",
+  "corpus": "PGE",
+  "source_document": "pge-2026-2028-base-wmp-vol1-r0.pdf",
+  "sources": [
+    {
+      "path": "evaluation/trial1_baseline/golden_test_set.json",
+      "sha256": "853aab5dd12a31e13eac3aca8c71b8b81e0a0d10ef410c0128ed57bf55306c75",
+      "question_count": 35
+    },
+    {
+      "path": "evaluation/harmonized/wmp_questions.json",
+      "sha256": "eed726c859c1dd0d7e6632016d5f9cc5f656fae035246cbfe06716e819d8de1b",
+      "question_count": 65
+    }
+  ],
+  "curation": {
+    "timing": "Completed before any paid OKF-condition evaluation.",
+    "excluded_duplicates": {
+      "wmp_q59": "Near-exact duplicate of supported SF-002, but mislabeled unanswerable.",
+      "wmp_q60": "Near-exact duplicate of wmp_q50.",
+      "wmp_q62": "Near-exact duplicate of wmp_q51."
+    },
+    "annotation_corrections": {
+      "NEG-001": "Tightened the control reference to acknowledge nearby SCE material while preserving the absent-fact label.",
+      "NEG-002": "Tightened the temporal control: projections or targets are not actual fiscal-year 2030 expenditure data.",
+      "NEG-003": "Tightened the scope control to distinguish nearby IT material from the requested billing-system cybersecurity controls.",
+      "wmp_q50": "Relabeled from unanswerable: Table 3-3 supplies all three annual figures, whose deterministic sum answers the question.",
+      "wmp_q51": "Relabeled from wholly unanswerable: the language is absent, but the model and geospatial frameworks are explicitly described on page 496.",
+      "wmp_q52": "Tightened the runtime control to acknowledge operational cadence without mistaking it for wall-clock compute time.",
+      "wmp_q54": "Tightened the comparison control to acknowledge qualitative cross-utility material while preserving the missing quantitative comparison.",
+      "wmp_q56": "Relabeled from unanswerable: the WMP documents survey methods and use of results, while appropriately noting that detailed results are external.",
+      "wmp_q58": "Tightened the international control to acknowledge nearby global-use and collaboration statements without treating them as an adaptation method.",
+      "wmp_q64": "Corrected 'Center' to the source's 'Group' and tightened the licensing control reference; the requested license remains absent."
+    }
+  },
+  "counts": {
+    "total": 97,
+    "answerable": 83,
+    "negative_or_control": 14,
+    "with_expected_pages": 83
+  },
+  "questions": [
+    {
+      "qid": "SF-001",
+      "question": "What is the estimated effectiveness of PSPS at reducing catastrophic wildfire risk?",
+      "reference_answer": "PG&E estimates PSPS is 95 percent effective at reducing catastrophic wildfire risk.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "easy",
+      "expected_pages": [
+        197
+      ],
+      "expected_sections": [
+        "Section 7"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "SF-002",
+      "question": "What is the average cost per mile for primary distribution undergrounding versus covered conductor installation?",
+      "reference_answer": "PG&E estimates that the average cost for primary distribution undergrounding is approximately $3.0 million per mile and the average cost to install covered conductor is approximately $1.0 million per mile.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "easy",
+      "expected_pages": [
+        159
+      ],
+      "expected_sections": [
+        "Section 6.1.3.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "SF-003",
+      "question": "What is the approximate effectiveness of covered conductor installation at reducing ignition risk?",
+      "reference_answer": "Distribution covered conductor installation is approximately 67 percent effective at reducing ignition risk.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "easy",
+      "expected_pages": [
+        159
+      ],
+      "expected_sections": [
+        "Section 6.1.3.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "SF-004",
+      "question": "What is the Tracking ID for PG&E's Covered Conductor Installation activity in the 2026-2028 WMP?",
+      "reference_answer": "The Tracking ID for Covered Conductor Installation is GH-12.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "easy",
+      "expected_pages": [
+        210
+      ],
+      "expected_sections": [
+        "Section 8.2.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "SF-005",
+      "question": "What is PG&E's self-identified performance metric for evaluating WMP effectiveness?",
+      "reference_answer": "Weather-Normalized CPUC-Reportable Fire Ignitions Rate in R3+ Conditions (Rolling 365 days). The metric focuses on ignitions occurring in elevated wildfire risk conditions as measured by the FPI of R3 and above.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "medium",
+      "expected_pages": [
+        52
+      ],
+      "expected_sections": [
+        "Section 3.5"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "SF-006",
+      "question": "What radial clearance does GO 95 Appendix E Case 14 require for bare conductors in the HFTD?",
+      "reference_answer": "Case 14 of Table 1 specifies 12 feet radial clearance of bare line conductors from vegetation in the HFTD.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "medium",
+      "expected_pages": [
+        390
+      ],
+      "expected_sections": [
+        "Section 9.2.1.3"
+      ],
+      "requires_table": true,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "SF-007",
+      "question": "How many PSPS events did PG&E implement from 2019 through 2024 and how many damage instances were mitigated?",
+      "reference_answer": "From 2019 through 2024, PG&E implemented 27 PSPS events that mitigated 1,439 instances of damage or hazards during high-risk weather conditions.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "medium",
+      "expected_pages": [
+        197
+      ],
+      "expected_sections": [
+        "Section 7"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "SF-008",
+      "question": "What is the combined effectiveness of covered conductor with EPSS and DCD at reducing ignition risk?",
+      "reference_answer": "The combination of covered conductor, EPSS and DCD is approximately 79 percent effective at reducing ignition risk.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "medium",
+      "expected_pages": [
+        159
+      ],
+      "expected_sections": [
+        "Section 6.1.3.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "TB-001",
+      "question": "How many PSPS events occurred in 2019, and how many total circuits were de-energized that year?",
+      "reference_answer": "In 2019, there were 8 PSPS events where de-energization was initiated, and a total of 1,842 circuits were de-energized.",
+      "answerable": true,
+      "category": "table_based",
+      "difficulty": "medium",
+      "expected_pages": [
+        198
+      ],
+      "expected_sections": [
+        "Section 7, Table PG&E-7-1"
+      ],
+      "requires_table": true,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "TB-002",
+      "question": "How many total customers were impacted by PSPS in 2019?",
+      "reference_answer": "In 2019, 2,036,019 total customers were impacted by PSPS events.",
+      "answerable": true,
+      "category": "table_based",
+      "difficulty": "medium",
+      "expected_pages": [
+        198
+      ],
+      "expected_sections": [
+        "Section 7, Table PG&E-7-1"
+      ],
+      "requires_table": true,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "TB-003",
+      "question": "What are PG&E's minimum clearance distances for transmission lines at 60-70 kV, 115 kV, 230 kV, and 500 kV?",
+      "reference_answer": "PG&E minimum clearance distances: 60-70 kV = 4 feet, 115 kV = 10 feet, 230 kV = 10 feet, 500 kV = 15 feet.",
+      "answerable": true,
+      "category": "table_based",
+      "difficulty": "medium",
+      "expected_pages": [
+        399
+      ],
+      "expected_sections": [
+        "Section 9.2.3.3, Table PG&E-9.2.3.3-1"
+      ],
+      "requires_table": true,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "TB-004",
+      "question": "How many PSPS events occurred in 2023 and 2024, and how many circuits were de-energized in each year?",
+      "reference_answer": "In 2023, there were 2 PSPS events with 27 circuits de-energized. In 2024, there were 6 PSPS events with 242 circuits de-energized.",
+      "answerable": true,
+      "category": "table_based",
+      "difficulty": "medium",
+      "expected_pages": [
+        198
+      ],
+      "expected_sections": [
+        "Section 7, Table PG&E-7-1"
+      ],
+      "requires_table": true,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "TB-005",
+      "question": "What percentage of sustained outages historically accounts for total outages in HFTD/HFRA?",
+      "reference_answer": "Historically, the fraction of sustained outages out of total outages accounts for roughly 85 percent of outages in HFTD/HFRA.",
+      "answerable": true,
+      "category": "table_based",
+      "difficulty": "hard",
+      "expected_pages": [
+        96
+      ],
+      "expected_sections": [
+        "Section 5.2.2.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "TB-006",
+      "question": "How many DCD (Downed Conductor Detection) protection devices has PG&E installed through 2024, and what percentage of HFTD/HFRA do they cover?",
+      "reference_answer": "Through 2024, DCD has been installed on 1,983 protection devices, providing enhanced protection across 87 percent of the HFTD/HFRA.",
+      "answerable": true,
+      "category": "table_based",
+      "difficulty": "medium",
+      "expected_pages": [
+        356
+      ],
+      "expected_sections": [
+        "Section 8.7.1.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "CS-001",
+      "question": "What are the four categories of PG&E's wildfire mitigation framework described in the 2026-2028 WMP?",
+      "reference_answer": "The framework includes four categories: (1) comprehensive monitoring and data collection; (2) operational mitigations; (3) system resilience; and (4) community support.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "medium",
+      "expected_pages": [
+        34
+      ],
+      "expected_sections": [
+        "Section 1, Executive Summary"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "CS-002",
+      "question": "What are PG&E's four WMP objectives for 2026-2028?",
+      "reference_answer": "(1) Reduce wildfire risk from vegetation/objects contacting power lines; (2) Reduce wildfire risk from equipment failure through inspections and new technologies; (3) Implement programs to limit customer disruption from wildfire mitigation, including reducing PSPS scope; (4) Mature enterprise systems by improving data accuracy and governance practices.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "medium",
+      "expected_pages": [
+        34,
+        44
+      ],
+      "expected_sections": [
+        "Section 1, Section 3.2"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "CS-003",
+      "question": "What two types of risk models does PG&E use, and what is the purpose of each type?",
+      "reference_answer": "PG&E uses (1) operational models for operational mitigations such as PSPS and EPSS that show where fire risk is elevated in the short-term, and (2) long-term planning models for resiliency programs that permanently reduce risk by hardening the grid.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "medium",
+      "expected_pages": [
+        35
+      ],
+      "expected_sections": [
+        "Section 1, Executive Summary"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "CS-004",
+      "question": "Describe PG&E's complete approach to selecting between overhead hardening and undergrounding for a circuit segment.",
+      "reference_answer": "PG&E first identifies high-risk circuit segments using the risk framework. Engineering teams then develop and analyze possible hardening solutions (overhead hardening, undergrounding, removal or relocation), including an economic analysis. PG&E may implement hybrid solutions using both approaches. If tree strike or ingress/egress issues are identified on a segment selected for overhead hardening, PG&E may underground portions. Similarly, overhead hardening may be used on portions of undergrounding projects where terrain makes undergrounding infeasible (steep slopes, hard rock, water crossings).",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "hard",
+      "expected_pages": [
+        210,
+        211
+      ],
+      "expected_sections": [
+        "Section 8.2.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "CS-005",
+      "question": "What protective equipment settings does PG&E deploy on distribution lines to reduce wildfire risk?",
+      "reference_answer": "PG&E deploys: (1) EPSS - rapidly deenergizes lines within one-tenth of a second if a fault is detected; (2) DCD - detects and isolates high impedance faults that EPSS alone cannot catch; (3) Sensitive Ground Fault (SGF) - identifies lower current faults, revised in 2024 to detect 5 amperage faults within 5 seconds; (4) SmartMeter Partial Voltage (PV) Alert for detecting low-voltage conditions; and (5) Communication Assisted Protection (ComAPS) on transmission lines.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "hard",
+      "expected_pages": [
+        356,
+        357
+      ],
+      "expected_sections": [
+        "Section 8.7.1.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "CC-001",
+      "question": "What conditions trigger a tree to be prescribed for work under PG&E's Distribution Routine Patrol Program?",
+      "reference_answer": "Trees are prescribed for work when: (1) dead, dying and declining trees or dead portions that may contact facilities if they fail; (2) green trees within the MDR or with potential to encroach before next work cycle; (3) trees where PG&E has knowledge of strain or abrasion to secondary lines; and (4) abnormal field conditions such as broken cross arms, objects on wires, broken poles, frayed conductors, arcing wires.",
+      "answerable": true,
+      "category": "compliance_check",
+      "difficulty": "medium",
+      "expected_pages": [
+        390
+      ],
+      "expected_sections": [
+        "Section 9.2.1.3"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "CC-002",
+      "question": "What factors does PG&E consider when prescribing vegetation clearance for individual trees?",
+      "reference_answer": "Clearance is determined on an individual tree basis considering: line operating voltage, length of span, line sag, planned maintenance cycles, location of vegetation within the span, species type, vegetation growth rate and characteristics, VM standards, best practices, local climate, elevation, fire risk, and vegetation trimming requirements applicable to SRA lands per PRC Sections 4102 and 4293.",
+      "answerable": true,
+      "category": "compliance_check",
+      "difficulty": "hard",
+      "expected_pages": [
+        390
+      ],
+      "expected_sections": [
+        "Section 9.2.1.3"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "CC-003",
+      "question": "What reporting mechanisms does PG&E use for quarterly WMP compliance reporting?",
+      "reference_answer": "PG&E uses three quarterly compliance reporting mechanisms: (1) Quarterly Data Report (QDR), (2) Quarterly Notification (QN), and (3) Annual Report on Compliance (ARC).",
+      "answerable": true,
+      "category": "compliance_check",
+      "difficulty": "easy",
+      "expected_pages": [
+        456
+      ],
+      "expected_sections": [
+        "Section 10.1.2"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "CC-004",
+      "question": "What are the External Factors that may impact PG&E's WMP target execution?",
+      "reference_answer": "External Factors include: physical conditions, environmental delays, landowner or customer refusals or non-contacts, permitting delays/restrictions, weather conditions, removed or destroyed assets, wildfires, exceptions or exemptions to regulatory/statutory requirements, and other safety considerations.",
+      "answerable": true,
+      "category": "compliance_check",
+      "difficulty": "medium",
+      "expected_pages": [
+        456
+      ],
+      "expected_sections": [
+        "Section 10.1.2"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "MH-001",
+      "question": "Given the cost difference between undergrounding ($3M/mile) and covered conductor ($1M/mile), and their respective effectiveness levels, which does PG&E prefer in the highest risk locations and why?",
+      "reference_answer": "Despite being 3x more expensive, PG&E prefers undergrounding in the highest risk locations because: (1) it provides greater wildfire risk reduction; (2) improved reliability; (3) operational cost avoidance from reduced vegetation management; (4) protection against multiple weather scenarios (winter storms, atmospheric rivers, extreme heat); and (5) covered conductor does not protect against tree strike risk or fully address reliability risk.",
+      "answerable": true,
+      "category": "multi_hop_reasoning",
+      "difficulty": "hard",
+      "expected_pages": [
+        159
+      ],
+      "expected_sections": [
+        "Section 6.1.3.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "MH-002",
+      "question": "How has PG&E's PSPS customer impact changed from its peak in 2019 to 2023, and what specific mitigation activities contributed to this reduction?",
+      "reference_answer": "PSPS customer impact peaked in 2019 with 2,036,019 customers impacted across 8 events and 1,842 circuits. By 2023, this dropped to 5,098 customers across 2 events and 27 circuits. Reduction was achieved through grid hardening, undergrounding, sectionalizing devices to enable targeted de-energization, SCADA devices, and improving risk model sensitivity to weather and fuel conditions.",
+      "answerable": true,
+      "category": "multi_hop_reasoning",
+      "difficulty": "hard",
+      "expected_pages": [
+        197,
+        198,
+        199
+      ],
+      "expected_sections": [
+        "Section 7, Table PG&E-7-1"
+      ],
+      "requires_table": true,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "MH-003",
+      "question": "How does PG&E's risk-informed decision making process use the Cost-Benefit Ratio (CBR) and what other factors influence mitigation selection beyond CBR?",
+      "reference_answer": "PG&E calculates a CBR for each mitigation incorporating cost estimates and effectiveness. The Investment Planning group uses CBRs and the RDF to prioritize investments. However, mitigation selection is not based solely on CBRs — other factors include: funding availability, labor resources, technology, planning and construction lead time, compliance requirements, risk tolerance thresholds, operations and execution considerations, and modeling limitations/uncertainties. SME judgment is integrated through cross-functional working groups.",
+      "answerable": true,
+      "category": "multi_hop_reasoning",
+      "difficulty": "hard",
+      "expected_pages": [
+        154,
+        155
+      ],
+      "expected_sections": [
+        "Section 6.1.3.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "MH-004",
+      "question": "What is the relationship between EPSS, DCD, and SGF in PG&E's fault protection strategy, and how do they complement each other?",
+      "reference_answer": "EPSS is the primary protection that trips faults within 100 milliseconds. However, the majority of ignitions while EPSS is enabled come from high impedance, low amperage faults that EPSS cannot detect. DCD addresses this by detecting and isolating high impedance faults. SGF further supplements by detecting lower current fault conditions — in 2024, PG&E lowered SGF thresholds from 15 amps/15 seconds to 5 amps/5 seconds after observed ignitions below DCD detection thresholds. SmartMeter PV Alerts add another detection layer for partial voltage conditions.",
+      "answerable": true,
+      "category": "multi_hop_reasoning",
+      "difficulty": "hard",
+      "expected_pages": [
+        356,
+        357
+      ],
+      "expected_sections": [
+        "Section 8.7.1.1"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "IF-001",
+      "question": "What does PG&E's 2026-2028 WMP Framework diagram show as the four categories of wildfire mitigation?",
+      "reference_answer": "Figure PG&E-1-2 shows the WMP framework with four categories: (1) Comprehensive Monitoring and Data Collection; (2) Operational Mitigations; (3) System Resilience; and (4) Community Support. The framework uses risk-informed decision-making to minimize ignition risk and outage impacts.",
+      "answerable": true,
+      "category": "image_figure_based",
+      "difficulty": "hard",
+      "expected_pages": [
+        35
+      ],
+      "expected_sections": [
+        "Section 1, Figure PG&E-1-2"
+      ],
+      "requires_table": false,
+      "requires_image": true,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "IF-002",
+      "question": "What does PG&E's Wildfire Distribution Risk Analysis Framework diagram show about how risk is calculated?",
+      "reference_answer": "Figure PG&E-5.2-2 shows the WDRM uses risk driver models producing equipment asset and geospatial results at 100m x 100m pixel resolution. Risk is calculated by combining Likelihood of Risk Event (LoRE), probability of ignition p(i), and Consequence of Risk Event (CoRE)/Wildfire Consequence (WFC). Results are aggregated along circuit segments.",
+      "answerable": true,
+      "category": "image_figure_based",
+      "difficulty": "hard",
+      "expected_pages": [
+        51,
+        101
+      ],
+      "expected_sections": [
+        "Section 5.2, Figure PG&E-5.2-2"
+      ],
+      "requires_table": false,
+      "requires_image": true,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "IF-003",
+      "question": "What does the WFC Calculation Procedure Schematic show about how wildfire consequence is calculated?",
+      "reference_answer": "Figure PG&E-5-2-5 shows WFC v4 consequence values are calculated from three components: (1) Base Consequence considering hazard intensity and exposure potential; (2) Wildfire Suppression Impact; and (3) Public Egress Impact considering vulnerability.",
+      "answerable": true,
+      "category": "image_figure_based",
+      "difficulty": "hard",
+      "expected_pages": [
+        67,
+        97
+      ],
+      "expected_sections": [
+        "Section 5.2.2.2, Figure PG&E-5-2-5"
+      ],
+      "requires_table": false,
+      "requires_image": true,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "NEG-001",
+      "question": "What is Southern California Edison's undergrounding cost per mile?",
+      "reference_answer": "The PG&E WMP contains limited comparisons with Southern California Edison, but it does not provide SCE's undergrounding cost per mile. The answer should decline that specific request rather than substitute PG&E's cost.",
+      "answerable": false,
+      "category": "negative_out_of_context",
+      "difficulty": "easy",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3",
+      "curation_note": "Tightened the control reference to acknowledge nearby SCE material while preserving the absent-fact label."
+    },
+    {
+      "qid": "NEG-002",
+      "question": "What were PG&E's actual WMP expenditures for fiscal year 2030?",
+      "reference_answer": "The WMP provides projected expenditures for 2026-2028 and some longer-horizon planning information, but it cannot provide actual fiscal-year 2030 WMP expenditures.",
+      "answerable": false,
+      "category": "negative_temporal",
+      "difficulty": "easy",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3",
+      "curation_note": "Tightened the temporal control: projections or targets are not actual fiscal-year 2030 expenditure data."
+    },
+    {
+      "qid": "NEG-003",
+      "question": "How does PG&E's WMP address cybersecurity threats to its customer billing system?",
+      "reference_answer": "The WMP contains generic enterprise-system, access-management, and all-hazards material, but it does not describe cybersecurity controls for PG&E's customer billing system.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "easy",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3",
+      "curation_note": "Tightened the scope control to distinguish nearby IT material from the requested billing-system cybersecurity controls."
+    },
+    {
+      "qid": "NEG-004",
+      "question": "Does PG&E's WMP guarantee zero wildfire ignitions from its equipment?",
+      "reference_answer": "NEGATIVE: No — the WMP explicitly states the goal is to 'minimize the risk of catastrophic wildfire' per Public Utilities Code Section 8386(a), not to guarantee zero ignitions. The plan uses language of 'reduce,' 'minimize,' and 'mitigate' throughout, acknowledging risk can be reduced but not eliminated.",
+      "answerable": true,
+      "category": "negative_nuanced",
+      "difficulty": "medium",
+      "expected_pages": [
+        34
+      ],
+      "expected_sections": [
+        "Section 1",
+        "Section 3.2"
+      ],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "NEG-005",
+      "question": "What is the exact number of trees PG&E will trim on March 15, 2026 in Butte County?",
+      "reference_answer": "NEGATIVE: The WMP provides programmatic targets and policies, not daily operational schedules for specific counties. This level of operational granularity is not in the WMP.",
+      "answerable": false,
+      "category": "negative_granularity",
+      "difficulty": "easy",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "trial1_golden_v3"
+    },
+    {
+      "qid": "wmp_q1",
+      "question": "What is the docket number associated with PG&E's 2026 to 2028 Electrical Corporation Wildfire Mitigation Plan?",
+      "reference_answer": "The docket number is 2026-2028-Base-WMPs.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        1
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q2",
+      "question": "What is the page number where the Frequency or Trigger information for the Transmission – Infrared Inspection Program is located?",
+      "reference_answer": "Page 231 contains the Frequency or Trigger information for the Transmission – Infrared Inspection Program.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        6
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q3",
+      "question": "On what page does the section covering Transmission Hazard Patrol Overview and Area Inspected begin?",
+      "reference_answer": "According to the table of contents, section 9.2.4.1 Transmission Hazard Patrol Overview and Area Inspected begins on page 373.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        12
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q4",
+      "question": "On what page number does the section on Environmental Monitoring Systems begin?",
+      "reference_answer": "Environmental Monitoring Systems begins on page 429, as indicated in the table of contents under section 10.2.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        17
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q5",
+      "question": "On what page is TABLE PG&E-6.2.1.2-1 about contingency table for EPSS effectiveness calculation located?",
+      "reference_answer": "TABLE PG&E-6.2.1.2-1 is located on page 154 of the document.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        22
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q6",
+      "question": "According to the List of Figures, what is the time period covered by Figure PG&E-4.3-1 regarding de-energized circuits by frequency with HFTD contour overlays?",
+      "reference_answer": "The time period is 2019-2024, as indicated in Figure PG&E-4.3-1: DE-ENERGIZED CIRCUITS BY FREQUENCY WITH HFTD CONTOUR OVERLAYS 2019-2024.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        27
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q7",
+      "question": "What three main components does PG&E's wildfire mitigation strategy include to address wildfire risk?",
+      "reference_answer": "PG&E's wildfire mitigation strategy includes: (1) preventing wildfire ignitions, (2) swiftly responding to any ignition to limit the scale of incidents, and (3) supporting efforts to improve forest health to reduce Wildfire Consequence (WFC).",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        32
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q8",
+      "question": "What specific mechanism does PG&E use to share wildfire mitigation information and best practices with other utilities?",
+      "reference_answer": "PG&E regularly engages in working group meetings with other investor-owned utilities in which they exchange information about wildfire mitigations and discuss best practices.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        38
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q9",
+      "question": "Which vegetation management activity is specifically designed to address tree mortality on transmission lines?",
+      "reference_answer": "VM-13, Transmission Hazard Patrol (Second Patrol, Tree Mortality), is the vegetation management activity specifically designed to address tree mortality on transmission lines.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        46
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q10",
+      "question": "What is the time window used for the Weather-Normalized CPUC-Reportable Fire Ignitions Rate metric in R3+ Conditions, and what problem does this time window address?",
+      "reference_answer": "The metric uses a rolling 365-day time window. This rolling metric addresses the issue of considerable swings during the first half of the year when the number of R3 days is low (often 0).",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        52
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q11",
+      "question": "What was the total acreage burned in the Camp fire according to the wildfire data table?",
+      "reference_answer": "The Camp fire burned 153,336 acres according to the table on page 61.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        61
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q12",
+      "question": "What was the distance between the California White Oak/Valley Oak tree that caused the Pocket Fire and the distribution conductors it contacted?",
+      "reference_answer": "The California White Oak/Valley Oak tree was rooted approximately 15 feet from the distribution conductors. When a top section of the tree broke, at least one conductor of the 12 kV circuit ended up on the ground, causing the fire that started on October 9, 2017.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        66
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q13",
+      "question": "What section of the 2026-2028 Wildfire Mitigation Plan covers risk methodology and assessment?",
+      "reference_answer": "Section 5 covers risk methodology and assessment in PG&E's 2026-2028 Wildfire Mitigation Plan.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        73
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q14",
+      "question": "According to the Risk Analysis Framework section, what are the minimum five factors that an electrical corporation must evaluate when quantifying risk impact?",
+      "reference_answer": "The five minimum factors are: Equipment/Assets (type, age, inspection, maintenance procedures); Topography (elevation, slope, aspect); Weather (including statistically extreme conditions based on history and seasonal patterns); Vegetation (type, species, fuel model, canopy characteristics, growth rates, moisture content, clearance procedures); and Climate Change (long-term seasonal changes, statistical extreme weather, impacts on vegetation).",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        80
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q15",
+      "question": "What is the key difference between how the transmission and distribution probability of ignition models are implemented?",
+      "reference_answer": "The transmission p(i) model uses a combination of engineering first-principle calculations and machine-learning algorithms, whereas the distribution p(i) model uses machine-learning algorithms only.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        86
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q16",
+      "question": "What is the time period used in the historical PSPS event lookback calculation for estimating PSPS likelihood?",
+      "reference_answer": "The historical PSPS event lookback uses a 5-year period. The PSPS likelihood formula divides the number of concurrent events by 5 years and multiplies by the average occurrence frequency per event.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        93
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q17",
+      "question": "What are the three components that PG&E sums together to calculate overall utility risk?",
+      "reference_answer": "PG&E calculates overall utility risk as the sum of Ignition (Wildfire) Risk, PSPS risk, and EPSS risk.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        101
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q18",
+      "question": "How many components did PG&E identify through Failure Modes and Effects Analysis as potentially resulting in wildfire ignition if they failed, and into how many asset groups were these components divided?",
+      "reference_answer": "PG&E identified 47 components through Failure Modes and Effects Analysis that could result in wildfire ignition if they failed. These 47 components were divided into 9 asset groups, with asset-specific datasets assigned to each group.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        109
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q19",
+      "question": "What is the return interval associated with Wind Load Condition 4 (Credible Worst Case)?",
+      "reference_answer": "Wind Load Condition 4 uses a 300-year return interval, which corresponds to wind gusts with a probability of exceedance of 1 percent over the 3-year WMP cycle.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        114
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q20",
+      "question": "What incident command system framework does PG&E's Company Emergency Response Plan (CERP) follow, and what types of hazards does this approach address?",
+      "reference_answer": "The CERP uses common emergency response protocols and follows a recognized incident command system with an all-hazards approach that applies to any natural disaster or human-caused situation, including fires, floods, storms, earthquakes, terrorist or cyber-attack scenarios that threaten life and property or require immediate action to protect or restore service.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        120
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q21",
+      "question": "What percentile threshold defines top-risk areas for wildfire risk assessment in the HFRA?",
+      "reference_answer": "Top-risk areas are defined as the distribution circuit segments that are in the upper 20th percentile for wildfire risk, based on WDRM v4 risk values.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        129
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q22",
+      "question": "What committee is responsible for reviewing and approving risk models for use according to Figure PG&E-5.6.2-1?",
+      "reference_answer": "According to the text, risk models are reviewed and approved for use by the Wildfire Risk Governance Steering Committee (WRGSC), as outlined in Figure PG&E-5.6.2-1.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        134
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q23",
+      "question": "What are the four key areas in which PG&E must provide a plan to improve its risk assessment according to Section 5.7?",
+      "reference_answer": "The four key areas are: Risk Assessment Methodology (wildfire and PSPS risk assessment methodology and documentation), Design Basis (justification of design basis scenarios), Risk Presentation (presentation of risk to stakeholders including dashboards and statistical assessments), and Risk Event Tracking (tracking and reconstruction of risk events and integration of lessons learned).",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        141
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q24",
+      "question": "What is the name of PG&E's distribution risk model used to narrow geographic scale and focus on assets and structures within HFTD/HFRA areas?",
+      "reference_answer": "PG&E uses the WDRM v4 (distribution risk model version 4) to narrow the geographic scale and focus on assets and structures located within HFTD/HFRA areas.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        147
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q25",
+      "question": "When did PG&E establish its Ignition Investigations team and what is one of its primary functions?",
+      "reference_answer": "PG&E established an Ignition Investigations team in April 2021 to bring expertise and forensic analysis to wildfire mitigation work and to inform preventative wildfire mitigation efforts. The team is trained in wildfire cause determination and origin, and investigates all CPUC-reportable ignitions to determine the cause and identify where PG&E's risk mitigations and controls failed to prevent ignition.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        152
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q26",
+      "question": "What type of analysis does PG&E use to evaluate the effectiveness of distribution wildfire mitigations, and what does this analysis compare?",
+      "reference_answer": "PG&E uses a detailed economic analysis for each mitigation that compares the long-term benefits to the costs over the life of the asset. The evaluation also compares the effectiveness of mitigations used alone versus in combination.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        157
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q27",
+      "question": "What four key components must be demonstrated in the high-level schematic showing procedures and evaluation criteria for evaluating potential wildfire mitigation activities?",
+      "reference_answer": "The schematic must demonstrate the roles of quantitative risk assessment, resource allocation, evaluation of other plan objectives (such as cost and timing), and SME (subject matter expert) judgment.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        162
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q28",
+      "question": "According to the Activity Scheduling section, what is the timeframe threshold that triggers the requirement for an electrical corporation to evaluate the need for interim activities?",
+      "reference_answer": "If an electrical corporation's activities require more than one year to implement, the corporation must evaluate the need for interim activities. Examples of interim activities include more frequent inspections, fire detection and monitoring activities, and PSPS usage.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        168
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q29",
+      "question": "Who is the Electrical Corporation Point of Contact for engaging with the public on wildfire mitigation planning and execution efforts?",
+      "reference_answer": "The Senior Director, Customer Engagement is the Electrical Corporation Point of Contact responsible for consulting and informing the public regarding various wildfire mitigation planning and execution efforts, including customer resilience, outreach, education, and notifications.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        175
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q30",
+      "question": "According to the Enterprise Risk Model (MAVF) calculation shown in the document, what is the total Enterprise Risk value and how is it composed across the different risk categories?",
+      "reference_answer": "The total Enterprise Risk is 22,426, composed of Wildfire Risk (17,074 Dx + 2,314 Tx + 36 Sub = 19,424), PSPS Risk (1,953), and EPSS Risk (1,049).",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        182
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q31",
+      "question": "According to Table PG&E-6.2.1.2-3, what is the calculated risk reduction value for the backlog tags equipment replacement and maintenance program, and what percentage does this represent of total overall utility risk?",
+      "reference_answer": "The calculated risk reduction is 158, which represents 0.7% of the total overall utility risk of 22,426. This is derived from the formula: 13,400 × 25% × 35% × 90% × 15% = 158, then divided by total utility risk (158 / 22,426 = 0.7%).",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        189
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q32",
+      "question": "What is the purpose of shunt splice installation according to the mitigation strategy described?",
+      "reference_answer": "Shunt splice installation is placed on top of an existing splice identified as having higher risk of failure. This installation eliminates the splice as a single point of failure, serving as a shorter-term mitigation to strengthen components and extend their life.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        195
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q33",
+      "question": "What is the date of the PG&E PSPS Report to the CPUC regarding the July 2-3, 2024 De-Energization event?",
+      "reference_answer": "The PG&E PSPS Report to the CPUC on the July 2-3, 2024 De-Energization event was issued on July 18, 2024.",
+      "answerable": true,
+      "category": "simple_factual",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        200
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q34",
+      "question": "What is the risk reduction target percentage for 2023-2026 that PG&E must achieve according to the 2023 GRC decision?",
+      "reference_answer": "The risk reduction target for 2023-2026 is 18 percent, as required by PG&E's 2023 GRC decision (D.23-11-069, OP 22).",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        206
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q35",
+      "question": "How might PG&E's future inspection cadence be affected by monitoring capabilities, and what types of updates regarding inspection program changes must PG&E discuss in its WMP submission?",
+      "reference_answer": "According to page 392, PG&E's inspection cadence in future years may be impacted by the ability to monitor conditions on a recurring basis instead of annually. Additionally, per page 392 section 9.2.1.6, PG&E must discuss changes/updates to the inspection program since its last WMP submission, including known future plans beyond the current year and new/novel strategies to be implemented in the next five years, such as strategies from pilot projects and research, as well as lessons learned.",
+      "answerable": true,
+      "category": "multi_hop",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        325,
+        392,
+        505
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q36",
+      "question": "Based on the PG&E 2026-2028 Wildfire Mitigation Plan, how does PG&E's commitment to learning from events and maintaining an adaptive approach (as referenced on page 37) connect to its organizational structure and partnerships outlined in the plan's table of contents (as shown on page 13)?",
+      "reference_answer": "Page 37 indicates that PG&E maintains a proactive, adaptive approach to wildfire mitigation by being vigilant and learning from events both within and beyond its service territory to address evolving wildfire dynamics. Page 13's table of contents reveals that the plan includes detailed sections on partnerships with California Community Colleges (sections 9.8.2.1-9.8.2.3), which suggests PG&E leverages external partnerships and educational institutions as part of its adaptive learning strategy to support wildfire mitigation efforts and community engagement.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        1,
+        13,
+        37
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q37",
+      "question": "How does PG&E's approach to workforce qualifications for Troublemen in wildfire mitigation relate to the company's broader strategy for calculating ignition rates in high fire threat areas?",
+      "reference_answer": "While Troublemen roles (such as QEWs) do not have certifications directly related to wildfire and PSPS mitigation, their work is important to the ongoing safe operation of PG&E equipment. This safe equipment operation is critical because ignition rates in HFTD and HFRA areas are calculated based on CPUC-reportable ignitions caused by equipment failure, overload, and utility operation. Therefore, ensuring qualified personnel maintain equipment safely directly supports PG&E's ability to reduce ignitions in high fire threat areas by preventing equipment-related failures that contribute to the ignition rate calculations.",
+      "answerable": true,
+      "category": "multi_hop",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        309,
+        379,
+        559
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q38",
+      "question": "How does PG&E's approach to workforce planning and qualifications for risk event inspection support its partnership-based vegetation management strategy with Resource Conservation Districts?",
+      "reference_answer": "PG&E's workforce planning ensures qualified personnel (such as QEWs and Troublemen) are available to safely execute and monitor wildfire mitigation work. This trained workforce enables PG&E to effectively partner with Resource Conservation Districts like El Dorado RCD and Nevada County RCD by providing grants to complement larger CAL FIRE grants for targeted vegetation treatment projects (such as the Spanish Flats and Traverse Creek project anticipated to treat 70 acres). The qualified workforce can then monitor and reinspect these partnership-funded projects to ensure work orders are prioritized and executed based on risk, supporting the overall success of these collaborative mitigation efforts.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        340,
+        379,
+        431
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q39",
+      "question": "How does PG&E's multi-layered approach to wildfire mitigation combine both infrastructure hardening and community partnerships to address different aspects of fire risk reduction?",
+      "reference_answer": "PG&E combines infrastructure hardening measures like covered conductor, EPSS, and DCD (which together are approximately 79 percent effective at reducing ignition risk) with community partnerships including tribal governments and associations. These tribal partners support fire and fuel crews to achieve on-the-ground risk reduction through roadside treatment projects that improve ingress and egress on one-way-in and one-way-out roads while reducing fire risk. Additionally, PG&E's monitoring systems use external vendors to collect station data every 10 minutes with automated health checks and alerts sent to the Enterprise Network Operations Center for emergent maintenance, creating a comprehensive approach that addresses both electrical infrastructure reliability and landscape-level fuel management.",
+      "answerable": true,
+      "category": "multi_hop",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        159,
+        420,
+        491
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q40",
+      "question": "How does PG&E's approach to reporting on wildfire mitigation activities differ between its defined targets and additional planned activities, and what implications does this distinction have for monitoring and accountability as described in the WMP?",
+      "reference_answer": "PG&E will report on defined targets for quarterly compliance reporting using the QDR, QN, and ARC mechanisms (page 505). However, PG&E will NOT report on additional wildfire-related activities beyond these targets in these quarterly reports because they are not defined targets but rather descriptions of plans to provide a complete picture of mitigation efforts (page 505). This creates a distinction where only formalized targets are subject to the standard monitoring and reinspection procedures that utilities must follow for work orders and compliance tracking (page 340), while broader planned activities remain outside the formal quarterly accountability structure.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        13,
+        340,
+        505
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q41",
+      "question": "How does PG&E's approach to aggregating ignition risk at the circuit segment level relate to the consequence modeling used in the WFC Model, and what types of data inform both processes?",
+      "reference_answer": "PG&E aggregates ignition risk results to circuit segments by summing up all potential risk modeled along the length of a segment, including pixel risk from geospatial models and multiple assigned equipment assets. This aggregated risk information feeds into the WFC Model, which predicts the impact of ignition events in terms of potential hazard to life, property, and land. The WFC Model's consequence values are determined using detailed fuels, weather, and topography data from simulated fire outcomes. Both processes rely on detailed environmental and infrastructure data to assess wildfire risk comprehensively.",
+      "answerable": true,
+      "category": "multi_hop",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        54,
+        101,
+        505
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q42",
+      "question": "How does PG&E's approach to calculating wildfire risk reduction through programs like undergrounding and covered conductor installation (as shown in the example calculations) connect to the company's broader adaptive strategy for addressing evolving wildfire dynamics?",
+      "reference_answer": "PG&E uses quantified risk reduction metrics (such as the 98% program effectiveness applied to workplan risk exposure, resulting in specific risk reduction values like 24.5) to measure the impact of mitigation programs like undergrounding and covered conductor installation. These calculated risk reductions feed into the company's proactive, adaptive approach to wildfire mitigation described in Section 13.2, enabling PG&E to learn from events and continuously evolve its mitigation strategies in response to changing wildfire dynamics, including increased threats of urban conflagrations. The data-driven calculations allow PG&E to prioritize and adjust its mitigation efforts based on measured effectiveness rather than relying solely on reactive measures.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        37,
+        188,
+        325
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q43",
+      "question": "Based on the document structure and content, what can be inferred about PG&E's approach to wildfire mitigation by combining information about the document's scope (covering 2026-2028) and the Remote Grid Program's demonstrated reliability improvements (99.7% in 2023 and 99.83% in 2024)?",
+      "reference_answer": "PG&E's 2026-2028 Wildfire Mitigation Plan demonstrates a commitment to continuing proven programs like the Remote Grid Program, which has shown significant reliability improvements by eliminating weather-related and tree strike outages. The plan's forward-looking three-year scope (2026-2028) indicates PG&E intends to build upon these successful initiatives, as evidenced by their stated plan to continue the Remote Grid Program in its current form while integrating it with core operational systems for enhanced monitoring and coordination.",
+      "answerable": true,
+      "category": "multi_hop",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        1,
+        13,
+        238
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q44",
+      "question": "How does PG&E's vegetation management approach under PRC 4292 regulations (page 408) relate to its transmission switch failure rate monitoring and remediation processes (page 325), and what is the connection between these two mitigation strategies?",
+      "reference_answer": "PRC 4292 mandates vegetation clearance requirements around poles and towers supporting critical equipment like switches and transformers within SRAs to prevent vegetation-related outages. This vegetation management directly supports PG&E's transmission switch failure rate monitoring system (page 325), which tracks outages caused by various factors including vegetation. By maintaining firebreaks and clearing brush and grass around switch-supporting poles per PRC 4292, PG&E reduces vegetation-caused failures that would otherwise be counted in the failure rate calculations used to determine remediation timeframes and maintenance activities for transmission switches.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        325,
+        392,
+        408
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q45",
+      "question": "How does PG&E use LiDAR data and pole loading calculations to support its hardening activities, and what is the connection to PG&E's broader system hardening targets like GH-12?",
+      "reference_answer": "PG&E uses LiDAR data to perform pole loading calculations that identify overloaded poles, which increases the probability of failure. By comparing the locations of overloaded poles to wildfire ignition consequence profiles, PG&E can prioritize mitigation efforts. This prioritization supports the installation of hardened overhead conductor as part of System Hardening Target GH-12, under which PG&E has installed approximately 1,230 miles of hardened overhead conductor since 2018 (including 145 miles in 2023 and 108 miles in 2024) to improve overall reliability and reduce wildfire risk.",
+      "answerable": true,
+      "category": "multi_hop",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        226,
+        281,
+        446
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q46",
+      "question": "How does PG&E's covered conductor installation program relate to its broader system hardening objectives, and what additional evaluation efforts are planned to maximize the effectiveness of this approach?",
+      "reference_answer": "PG&E has installed approximately 1,230 miles of hardened overhead conductor since 2018 (including 145 miles in 2023 and 108 miles in 2024) as part of System Hardening Target GH-12. This covered conductor work is expected to improve overall reliability. To maximize effectiveness, PG&E is working to quantify exactly how much reliability has improved where covered conductor and undergrounded segments exist, and has planned evaluation activities including GH-02 (2025) to evaluate and implement covered conductor effectiveness impact on inspections and maintenance standards, and GH-03 (2023) to evaluate covered conductor effectiveness more broadly.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        226,
+        420,
+        588
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q47",
+      "question": "Based on PG&E's partnership approach described in the 2026-2028 WMP, how do the Resource Conservation District grants and Tribal government collaborations differ in their reporting requirements and operational focus?",
+      "reference_answer": "Resource Conservation District grants (such as those provided to El Dorado RCD and Nevada County RCD) fund specific treatment projects like the Spanish Flats and Traverse Creek work and roadside brushing, which are described as 'not compliance driven work' and are part of additional wildfire mitigation activities that PG&E will not report in QDR, QN, or ARC. In contrast, Tribal government collaborations focus on building capacity and achieving on-the-ground risk reduction through fire and fuel crews working on roadside treatment projects to improve ingress and egress. Both partnerships support treatment activities beyond compliance targets, but the RCD grants are explicitly non-compliance driven activities, while Tribal collaborations emphasize capacity building and collaborative support with existing crews.",
+      "answerable": true,
+      "category": "multi_hop",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        420,
+        431,
+        505
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q48",
+      "question": "How do PG&E's past-due work order management practices and prioritization systems relate to preventing the type of equipment failure that caused the Dixie Fire?",
+      "reference_answer": "The Dixie Fire was caused by a tree falling onto an overhead distribution line where fuses on two conductors operated but the third fuse failed to operate, leaving the line energized and leading to ignition. PG&E's past-due work order tracking system (shown in Tables 8-5-3, 8-6-3, and referenced in Table 9-7 and 9-8) categorizes maintenance tasks by age and priority level, with Level 1 and Level 2 priorities tracked across different time intervals. These prioritization and management systems are designed to ensure timely completion of critical maintenance work that could prevent equipment failures like the fuse malfunction in the Dixie Fire, though the tables show some work orders remain past-due even in higher priority categories.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        68,
+        354,
+        446
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q49",
+      "question": "Based on PG&E's wildfire mitigation efforts, how do the miles of hardened overhead conductor installed since 2018 relate to the wildfire risk reduction calculations shown in the example, and what is the expected outcome of these installations?",
+      "reference_answer": "Since 2018, PG&E has installed approximately 1,230 miles of hardened overhead conductor (including 145 miles in 2023 and 108 miles in 2024) as part of System Hardening Target GH-12. These covered conductor installations are designed to improve overall reliability. According to the example wildfire risk reduction calculations, undergrounding and covered conductor installation programs achieve 98% effectiveness in reducing wildfire risk exposure, resulting in a workplan wildfire risk reduction of 24.5 points from a risk exposure of 25, demonstrating that these hardening activities significantly contribute to PG&E's wildfire mitigation strategy.",
+      "answerable": true,
+      "category": "multi_hop",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        188,
+        226,
+        264
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": true,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q50",
+      "question": "What is the total dollar cost in millions that PG&E will spend on all wildfire mitigation activities across the 2026-2028 period?",
+      "reference_answer": "Projected WMP expenditures total $18,874.862 million for 2026-2028 ($5,513.330 million in 2026, $6,449.108 million in 2027, and $6,912.424 million in 2028).",
+      "answerable": true,
+      "category": "table_based",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        52,
+        53
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp",
+      "curation_note": "Relabeled from unanswerable: Table 3-3 supplies all three annual figures, whose deterministic sum answers the question."
+    },
+    {
+      "qid": "wmp_q51",
+      "question": "What programming language and software framework does PG&E use to implement its Fire Probability Index (FPI) 5.0 model?",
+      "reference_answer": "The WMP does not name the programming language. It states that FPI v5.0 uses a balanced random forest framework based on decision trees and uses Uber's open-source h3 framework for the 0.7 km2 hexagonal grid.",
+      "answerable": true,
+      "category": "method_detail",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        496
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp",
+      "curation_note": "Relabeled from wholly unanswerable: the language is absent, but the model and geospatial frameworks are explicitly described on page 496."
+    },
+    {
+      "qid": "wmp_q52",
+      "question": "How many wall-clock hours does it take to run a single iteration of PG&E's physics-based dynamic weather model on their current computing hardware?",
+      "reference_answer": "The WMP describes forecast cadence, simulations, and forecast horizon, but it does not report the wall-clock runtime of one physics-based dynamic-weather-model iteration on current hardware.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp",
+      "curation_note": "Tightened the runtime control to acknowledge operational cadence without mistaking it for wall-clock compute time."
+    },
+    {
+      "qid": "wmp_q53",
+      "question": "What is the estimated carbon footprint in metric tons of CO2 equivalent for PG&E's undergrounding mitigation projects over 2026-2028?",
+      "reference_answer": "The document does not provide this information.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q54",
+      "question": "How does PG&E's wildfire risk modeling approach compare quantitatively to the risk assessment methodologies used by Southern California Edison or San Diego Gas & Electric?",
+      "reference_answer": "The WMP describes qualitative benchmarking and collaboration with SCE and SDG&E, but it does not provide the requested quantitative comparison of their risk-assessment methodologies.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp",
+      "curation_note": "Tightened the comparison control to acknowledge qualitative cross-utility material while preserving the missing quantitative comparison."
+    },
+    {
+      "qid": "wmp_q55",
+      "question": "What open-source licenses or proprietary software licenses does PG&E use for its geospatial data processing and risk visualization tools?",
+      "reference_answer": "The document does not provide this information.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q56",
+      "question": "Has PG&E conducted user studies or human factors research to evaluate the effectiveness of its PSPS notification communications with customers, and what were the results?",
+      "reference_answer": "Yes. PG&E reports annual PSPS education/outreach surveys, pre- and post-season surveys used as a KPI, and post-event surveys of impacted customers and community-based organizations. The WMP describes how feedback drives improvements but does not report detailed numerical survey results; it points to AFN quarterly progress reports.",
+      "answerable": true,
+      "category": "cross_section_synthesis",
+      "difficulty": "unspecified",
+      "expected_pages": [
+        532,
+        541,
+        550
+      ],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp",
+      "curation_note": "Relabeled from unanswerable: the WMP documents survey methods and use of results, while appropriately noting that detailed results are external."
+    },
+    {
+      "qid": "wmp_q57",
+      "question": "What is the energy consumption in megawatt-hours required to power PG&E's data centers and computing infrastructure for running all wildfire risk models annually?",
+      "reference_answer": "The document does not provide this information.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q58",
+      "question": "How does PG&E's wildfire mitigation strategy apply to or could be adapted for use in international utility contexts outside the United States?",
+      "reference_answer": "The WMP notes that WRF is used internationally and describes some collaboration outside the three large California utilities, but it does not explain how PG&E's mitigation strategy should be adapted for international utility contexts.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp",
+      "curation_note": "Tightened the international control to acknowledge nearby global-use and collaboration statements without treating them as an adaptation method."
+    },
+    {
+      "qid": "wmp_q61",
+      "question": "How many tons of CO2 emissions will be avoided annually by PG&E's undergrounding program compared to maintaining overhead lines?",
+      "reference_answer": "The document does not provide this information.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q63",
+      "question": "How many hours of wall-clock runtime does the FPI 5.0 model require to complete a full forecast on a standard enterprise server?",
+      "reference_answer": "The document does not provide this information.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    },
+    {
+      "qid": "wmp_q64",
+      "question": "What open-source license or proprietary licensing agreement governs PG&E's use of the fire danger rating methodologies developed by the National Wildfire Coordinating Group?",
+      "reference_answer": "The WMP mentions fire-danger-rating courses offered by the National Wildfire Coordinating Group and use of the National Fire Danger Rating System, but it gives no open-source or proprietary licensing agreement.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp",
+      "curation_note": "Corrected 'Center' to the source's 'Group' and tightened the licensing control reference; the requested license remains absent."
+    },
+    {
+      "qid": "wmp_q65",
+      "question": "How does PG&E's wildfire mitigation approach compare to the specific methodologies used by utility companies in Australia or Mediterranean countries for managing fire risk?",
+      "reference_answer": "The document does not provide this information.",
+      "answerable": false,
+      "category": "negative_out_of_scope",
+      "difficulty": "unspecified",
+      "expected_pages": [],
+      "expected_sections": [],
+      "requires_table": false,
+      "requires_image": false,
+      "requires_multi_section": false,
+      "corpus": "PGE",
+      "source_set": "harmonized_wmp"
+    }
+  ]
+}

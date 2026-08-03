@@ -1,0 +1,25 @@
+{
+  "corpus": "PGE",
+  "diagnostic_encoder": {
+    "max_input_tokens": 8192,
+    "model": "amazon.titan-embed-text-v2:0"
+  },
+  "frozen_encoder": {
+    "max_input_tokens": 256,
+    "model": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "mean_fraction_of_passage_encoded": 0.6791635281934899,
+  "median_fraction_of_passage_encoded": 0.6440261762211561,
+  "note": "Passages longer than max_input_tokens are truncated by the frozen encoder, so the remainder is never embedded. BM25 indexes every token.",
+  "passages": 654,
+  "token_length": {
+    "max": 2035,
+    "mean": 423.93119266055044,
+    "median": 397.5,
+    "min": 14,
+    "p90": 601
+  },
+  "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+  "truncated_fraction": 0.808868501529052,
+  "truncated_passages": 529
+}

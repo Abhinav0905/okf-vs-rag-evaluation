@@ -1,0 +1,115 @@
+# =============================================================================
+# WMP-CRIS Evaluation Harness — configuration
+# Loaded by src/evaluation/config.py. Secrets (AWS creds, API keys) come from
+# the environment / .env, NOT from this file. This file is safe to commit.
+# =============================================================================
+
+seed: 42                       # global RNG seed (numpy, random, torch)
+
+# --- Retriever ---------------------------------------------------------------
+retriever:
+  backend: pgvector            # pgvector | faiss | bedrock_kb
+  device: auto                 # cpu | mps | cuda | auto — device for local SLMs
+                               #   (embedder, reranker). Override
+                               #   per-run with env EVAL_DEVICE=cpu|mps|cuda.
+  top_k: 10                    # chunks the generator ultimately sees
+  overfetch_k: 25             # dense candidates before reranking
+  reranker_model: cross-encoder/ms-marco-MiniLM-L-6-v2   # local cross-encoder
+  token_budget: 2200           # get_context() context window budget (tokens)
+  embed_model: sentence-transformers/all-MiniLM-L6-v2    # 384-dim, local
+  embed_dim: 384
+  # pgvector / Aurora connection. Host/port/user/password come from env
+  # (DB_HOST, DB_PORT, DB_NAME, DB_USERNAME, DB_PASSWORD). Defaults target the
+  # local Docker pgvector container (see scripts/start_pgvector.sh).
+  pg:
+    host_env: DB_HOST
+    port_env: DB_PORT
+    dbname_env: DB_NAME
+    user_env: DB_USERNAME
+    password_env: DB_PASSWORD
+    default_host: localhost
+    default_port: 5433
+    default_dbname: wmp_eval
+    default_user: postgres
+    default_password: postgres
+    table: wmp_chunks
+  faiss:
+    index_dir: data/faiss_index
+  bedrock_kb:
+    # Used only when backend == bedrock_kb (managed KB path on AWS).
+    knowledge_base_id_env: KNOWLEDGE_BASE_ID
+    rerank_model_arn: arn:aws:bedrock:us-west-2::foundation-model/cohere.rerank-v3-5:0
+
+# --- Generator ---------------------------------------------------------------
+generator:
+  backend: bedrock             # bedrock | openai | mock
+  bedrock_model_id: us.anthropic.claude-sonnet-4-5-20250929-v1:0
+  region_env: AWS_REGION
+  max_tokens: 1024
+  temperature: 0.0
+  openai_model: gpt-4o-mini    # fallback generator when backend == openai
+  # mock backend is deterministic and offline — used for smoke tests / CI.
+
+
+# --- Baseline system knobs ---------------------------------------------------
+systems:
+  simple_rag:
+    top_k: 10
+  reranked_simple:
+    overfetch_k: 25
+    top_k: 10
+  agentic_rag:
+    max_calls: 8
+    min_calls: 3
+  self_rag:
+    max_calls: 4
+  flare:
+    max_calls: 3
+    confidence_threshold: 0.5
+
+# --- Judge (Task 3) ----------------------------------------------------------
+judge:
+  backend: bedrock             # bedrock | openai | mock
+  # claude-3-5-haiku-20241022 reached end-of-life (2026); using current Haiku 4.5
+  # cross-region inference profile.
+  model_id: us.anthropic.claude-haiku-4-5-20251001-v1:0
+  region_env: AWS_REGION
+  temperature: 0.0
+  trials_per_question: 3
+  rubric_path: judge_prompts/rubric_v1.txt
+  openai_model: gpt-4o-mini
+  gold_annotations_path: data/gold/human_annotations.jsonl   # optional (validate_mode)
+
+# --- Bedrock on-demand pricing (USD per 1M tokens, June 2026) ----------------
+# Used by the cost model. Update when AWS pricing changes; recorded here so the
+# cost analysis is reproducible from a committed file.
+pricing:
+  us.anthropic.claude-sonnet-4-5-20250929-v1:0:
+    input_per_mtok: 3.00
+    output_per_mtok: 15.00
+  us.anthropic.claude-haiku-4-5-20251001-v1:0:
+    input_per_mtok: 1.00
+    output_per_mtok: 5.00
+  anthropic.claude-3-5-haiku-20241022-v1:0:
+    input_per_mtok: 0.80
+    output_per_mtok: 4.00
+  gpt-4o-mini:
+    input_per_mtok: 0.15
+    output_per_mtok: 0.60
+  mock:
+    input_per_mtok: 0.0
+    output_per_mtok: 0.0
+
+# --- Output paths ------------------------------------------------------------
+output:
+  dir: results
+  db_path: results/evaluation.db
+  records_jsonl: results/per_question_records.jsonl
+  table1_md: results/table1.md
+  stats_md: results/stats_report.md
+  cost_md: results/cost_analysis.md
+  audit_chain: results/audit_chain.jsonl
+
+# --- Cost projection ---------------------------------------------------------
+projection:
+  queries_per_day: 10000

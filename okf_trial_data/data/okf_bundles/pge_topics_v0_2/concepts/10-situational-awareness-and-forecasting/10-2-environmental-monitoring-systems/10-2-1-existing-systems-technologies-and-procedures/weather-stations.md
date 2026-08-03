@@ -1,0 +1,87 @@
+---
+type: Document Section
+title: Weather Stations
+resource: urn:sha256:e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a#section=weather-stations
+tags:
+- document-section
+- corpus-pge
+- level-4
+status: stable
+generated:
+  by: process:okf-trial-topic-bundle-v1
+  at: '2026-08-02T00:00:00Z'
+sources:
+- id: source-pdf
+  resource: urn:sha256:e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a#pages=461
+  title: pge-2026-2028-base-wmp-vol1-r0.pdf
+corpus: PGE
+corpus_version: pge_wmp_r0_20260719
+source_chunk_id: PGE-TOPIC-00757
+slug: weather-stations
+outline_level: 4
+outline_order: 757
+section_number: null
+section_path:
+- 10. Situational Awareness and Forecasting
+- 10.2 Environmental Monitoring Systems
+- 10.2.1 Existing Systems, Technologies, and Procedures
+- Weather Stations
+page_number: 461
+page_numbers:
+- 461
+document_name: pge-2026-2028-base-wmp-vol1-r0.pdf
+source_sha256: e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a
+content_sha256: 5037917926472914aca39dbf75ecbc38bf35b45a16732b40052312019528ce0a
+child_count: 0
+---
+
+# Weather Stations
+
+## Evidence
+
+<!-- okf-trial:evidence-start -->
+There is high wildfire risk across many remote areas within PG&E’s service territory.  
+California contains thousands of microclimates in which wind patterns differ based on 
+location and topography (e.g., on a ridge, in a canyon, or on a valley floor).  As weather 
+events unfold, such as the Diablo and Santa Ana wind events, the complex dynamics of 
+wind and terrain alignment, as well as boundary layer height, may result in downslope 
+windstorms where wind speeds accelerate down mountain ranges and topographic 
+features.  Although there are hundreds of Remote Automatic Weather Station and 
+National Weather Service (NWS) Weather Stations in remote areas of California, there 
+are many locations where microscale effects can occur that could lead to devastating 
+consequences.  The PG&E weather station network provides additional coverage to 
+verify weather conditions on the ground and build datasets to improve future models.
+
+A primary benefit of weather station data is enhanced situational awareness into 
+real-time weather-related risk.  Our weather stations provide more spatial and temporal 
+granularity into conditions than state and federal weather station networks.  We use our 
+weather stations to monitor temperatures, wind speeds, wind gusts, and RH, as they 
+are crucial for decision making during PSPS events.  Readings from stations are 
+evaluated in real-time in the Emergency Operations Center (EOC) to inform PSPS 
+decision-making and to validate safe conditions before the weather all clear is declared.  
+These stations are also utilized to verify weather model forecast performance.
+
+All weather station data is uploaded in real-time to the MADIS making it available to the 
+meteorological community and the public.  As a result, all our live and historical station 
+data can be found on the NWS’s Weather and Hazards Data Viewer:  
+https://www.wrh.noaa.gov/map/?obs=true&wfo=sto.
+
+Data from MADIS is also used by the National Center for Atmospheric Research 
+(NCAR) to initialize Global Weather Models.  These models are, in turn, used by PG&E 
+to run our high-resolution weather models.  Thus, increasing weather station coverage 
+in California should lead to incremental improvements in NCAR’s forecast ability.
+
+Generalized Location of the System/Locations Measured by the System 
+(e.g., HTFD, Entire Service Territory)
+<!-- okf-trial:evidence-end -->
+
+## Relationships
+
+* Parent topic: [10.2.1 Existing Systems, Technologies, and Procedures](../10-2-1-existing-systems-technologies-and-procedures.md)
+* Next topic: [Generalized Location of the System/Locations Measured by the System (e.g., HTFD, Entire Service Territory)](generalized-location-of-the-system-locations-measured-by-the-system-e-g.md)
+
+## Provenance
+
+Extracted from **pge-2026-2028-base-wmp-vol1-r0.pdf**, page 461.[^source-pdf]
+
+[^source-pdf]: pge-2026-2028-base-wmp-vol1-r0.pdf, page 461.

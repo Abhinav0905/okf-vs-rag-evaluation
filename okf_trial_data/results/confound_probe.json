@@ -1,0 +1,42 @@
+{
+  "bm25_evidence_links": {
+    "config": "top_k=10 seed_k=5 hops=1",
+    "label": "bm25_evidence_links",
+    "mean_expected_page_recall": 0.8744725738396625,
+    "mean_linked_fraction": 0.4971870604781997,
+    "mean_reciprocal_rank": 0.7292344786015672,
+    "median_latency_ms": 1.8045841716229916,
+    "n_scored": 79,
+    "page_hit_rate": 0.9240506329113924
+  },
+  "bm25_evidence_top10": {
+    "config": "top_k=10 seed_k=10 hops=0",
+    "label": "bm25_evidence_top10",
+    "mean_expected_page_recall": 0.9251054852320675,
+    "mean_linked_fraction": 0.0,
+    "mean_reciprocal_rank": 0.7363672895318465,
+    "median_latency_ms": 1.7685419879853725,
+    "n_scored": 79,
+    "page_hit_rate": 0.9746835443037974
+  },
+  "bm25_full_top10": {
+    "config": "top_k=10 seed_k=10 hops=0",
+    "label": "bm25_full_top10",
+    "mean_expected_page_recall": 0.9377637130801688,
+    "mean_linked_fraction": 0.0,
+    "mean_reciprocal_rank": 0.7500653003817561,
+    "median_latency_ms": 2.144500147551298,
+    "n_scored": 79,
+    "page_hit_rate": 0.9873417721518988
+  },
+  "okf_native_replicate": {
+    "config": "top_k=10 seed_k=5 hops=1",
+    "label": "okf_native_replicate",
+    "mean_expected_page_recall": 0.8554852320675106,
+    "mean_linked_fraction": 0.4971870604781997,
+    "mean_reciprocal_rank": 0.7389391199517782,
+    "median_latency_ms": 2.1960842423141003,
+    "n_scored": 79,
+    "page_hit_rate": 0.9113924050632911
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "corpus": "PGE",
+  "corpus_version": "pge_wmp_r0_20260719",
+  "source_pdf": "pge-2026-2028-base-wmp-vol1-r0.pdf",
+  "source_sha256": "e601db5767c0dcaa5e534315c49c3d90ad0b7b09b467da8a37ffc2c3dfb5dc6a",
+  "n_paragraphs": 1156,
+  "n_chunks": 654,
+  "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embed_dim": 384,
+  "target_tokens": 500,
+  "overlap_tokens": 60
+}

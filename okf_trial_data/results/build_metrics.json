@@ -1,0 +1,14 @@
+{
+  "build_seconds": 2.8420078339986503,
+  "bundle_bytes": 6631806,
+  "bundle_to_source_size_ratio": 1.6279432157188505,
+  "byte_deterministic_content_digest": true,
+  "concept_count": 1837,
+  "existing_bundle_content_sha256": "bec2561aa21eb4be38259d04d9aa34ed96b9abd57058fe7d10ce775eded1eb03",
+  "load_and_verify_seconds": 1.4316773330792785,
+  "markdown_artifact_count": 1843,
+  "rebuilt_bundle_content_sha256": "bec2561aa21eb4be38259d04d9aa34ed96b9abd57058fe7d10ce775eded1eb03",
+  "source_chunk_count": 1837,
+  "source_corpus_count": 3,
+  "source_manifest_and_jsonl_bytes": 4073733
+}
