@@ -1,4 +1,4 @@
-# Weak Baselines Manufacture Format Advantages: A Controlled Study of Google's Open Knowledge Format for Retrieval-Augmented Generation
+# Does Google's Open Knowledge Format Improve Retrieval-Augmented Generation? A Controlled Study on One Regulatory Document
 
 **Kumar Abhinav**  
 AiDash · abhinav@aidash.com  

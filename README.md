@@ -143,8 +143,8 @@ version; cite the version DOI to pin an exact snapshot.
 ```bibtex
 @software{abhinav_okf_rag_2026,
   author    = {Abhinav, Kumar},
-  title     = {Does Google's Open Knowledge Format improve retrieval-augmented
-               generation? A controlled study on one regulatory document},
+  title     = {Does Google's Open Knowledge Format Improve Retrieval-Augmented
+               Generation? A Controlled Study on One Regulatory Document},
   year      = {2026},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.21778673},

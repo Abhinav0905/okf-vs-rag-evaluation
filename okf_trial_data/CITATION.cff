@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite it as below."
-title: "Open Knowledge Format v0.2 as a Retrieval Substrate: A Controlled Evaluation Across Five RAG Pipelines"
+title: "Does Google's Open Knowledge Format Improve Retrieval-Augmented Generation? A Controlled Study on One Regulatory Document"
 abstract: >-
   A controlled, paired evaluation of one pinned Open Knowledge Format (OKF) v0.2
   producer and two disclosed consumers inside five unchanged retrieval-augmented

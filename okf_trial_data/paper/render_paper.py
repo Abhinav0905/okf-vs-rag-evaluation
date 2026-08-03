@@ -28,8 +28,8 @@ CONCEPT_DOI = "10.5281/zenodo.21778673"
 VERSION_DOI = "10.5281/zenodo.21778674"
 FUNDING = "AiDash"
 
-TITLE = ("Weak Baselines Manufacture Format Advantages: A Controlled Study of "
-         "Google's Open Knowledge Format for Retrieval-Augmented Generation")
+TITLE = ("Does Google's Open Knowledge Format Improve Retrieval-Augmented "
+         "Generation? A Controlled Study on One Regulatory Document")
 
 REFERENCES: list[tuple[str, str]] = [
     ("Google Cloud. Open Knowledge Format (OKF), Version 0.2. Pinned specification, "
